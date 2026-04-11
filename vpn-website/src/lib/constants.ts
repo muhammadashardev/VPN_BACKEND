@@ -26,8 +26,8 @@ export const VPN_SERVERS: VpnServer[] = countriesData.map((country: any) => {
     lat: country.latling[0],
     lng: country.latling[1],
     flag: country.flag,
-    load: Math.floor(Math.random() * 80) + 10,
-    latency: Math.floor(Math.random() * 200) + 20,
+    load: 10 + (hash % 80),
+    latency: 20 + (hash % 200),
   };
 });
 
