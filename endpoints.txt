@@ -1,0 +1,33 @@
+🚀 VPN BACKEND API ENDPOINTS
+================================
+
+Base URL: http://localhost:5000/api
+
+🔐 1. AUTHENTICATION (api/auth)
+--------------------------------
+- POST /register         -> User registration (Body: {name, email, password})
+- POST /login            -> User login (Body: {email, password})
+- GET  /me               -> Get current user profile (Header: x-auth-token)
+
+🌍 2. LOCATION (api/location)
+--------------------------------
+- GET  /countries         -> Fetch all countries
+- GET  /states?country=X  -> Fetch states by country code (e.g. ?country=PK)
+- GET  /cities?country=X&state=Y -> Fetch cities by country and state code
+- POST /save              -> Save last location (Body: {country, state, city})
+- GET  /last              -> Get user's last saved location
+
+📡 3. VPN CLIENT (api/vpn)
+--------------------------------
+- POST /create            -> Create VPN config (Body: {country, serverIP})
+- GET  /config            -> Get current VPN config (.conf content as text)
+- GET  /download          -> Download .conf file directly
+
+🖥️ 4. SERVERS (api/servers)
+--------------------------------
+- GET  /                  -> Get available VPN servers list
+- POST /                  -> Add a new server (Body: {country, ip, publicKey})
+
+⚠️ IMPORTANT:
+- All routes except login/register require "x-auth-token" in the Request Header.
+- Ensure MongoDB and the backend server are running before testing.
