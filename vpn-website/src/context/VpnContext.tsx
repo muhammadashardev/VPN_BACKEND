@@ -1,7 +1,9 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from "react";
 import { VpnServer, VPN_SERVERS } from "@/lib/constants";
+import { fetchGeoIpData, GeoIpData, getPublicIp } from "@/lib/ipService";
+import { checkWebRtcLeak, spoofLocation, clearSpoof } from "@/lib/security";
 
 interface VpnContextType {
   isConnected: boolean;
@@ -10,6 +12,10 @@ interface VpnContextType {
   localIp: string;
   currentIp: string;
   sessionTime: number;
+  isIpVerified: boolean;
+  isWebRtcSecure: boolean;
+  isLocationSecure: boolean;
+  locationData: GeoIpData | null;
   connect: () => Promise<void>;
   disconnect: () => void;
   selectServer: (server: VpnServer) => void;
@@ -25,23 +31,57 @@ export const VpnProvider = ({ children }: { children: ReactNode }) => {
   const [currentIp, setCurrentIp] = useState("Detecting...");
   const [sessionTime, setSessionTime] = useState(0);
 
-  // Fetch real IP on load
+  const [isIpVerified, setIsIpVerified] = useState(false);
+  const [isWebRtcSecure, setIsWebRtcSecure] = useState(true);
+  const [isLocationSecure, setIsLocationSecure] = useState(true);
+  const [locationData, setLocationData] = useState<GeoIpData | null>(null);
+
+  // Helper for one-time security audit & identity masking
+  const performSecurityAudit = useCallback(async () => {
+    try {
+      if (isConnected) {
+        // Use exact coordinates from server constants
+        spoofLocation(selectedServer.lat, selectedServer.lng);
+        setIsLocationSecure(true);
+      } else {
+        clearSpoof();
+        setIsLocationSecure(true);
+      }
+
+      const leakTest = await checkWebRtcLeak();
+      setIsWebRtcSecure(!leakTest.isLeaking);
+    } catch (err) {
+      console.error("Audit error:", err);
+    }
+  }, [isConnected, selectedServer.lat, selectedServer.lng]);
+
+  // Initial setup and real IP fetch
   useEffect(() => {
-    const fetchIp = async () => {
+    const init = async () => {
       try {
-        const response = await fetch("https://api.ipify.org?format=json");
-        const data = await response.json();
+        const data = await fetchGeoIpData();
+        
+        // Batch updates to reduce re-renders
         setLocalIp(data.ip);
-        setCurrentIp(data.ip);
+        setCurrentIp(isConnected ? selectedServer.ip : data.ip);
+        setLocationData(isConnected ? {
+          ...data,
+          ip: selectedServer.ip,
+          city: selectedServer.city,
+          country: selectedServer.country,
+          loc: `${selectedServer.lat},${selectedServer.lng}`
+        } : data);
+        
+        // Defer heavy security audits
+        setTimeout(performSecurityAudit, 1500);
       } catch (error) {
-        console.error("Failed to fetch real IP:", error);
-        setLocalIp("103.255.4.12"); // Fallback mock public IP
-        setCurrentIp("103.255.4.12");
+        setLocalIp("Detection failed");
       }
     };
-    fetchIp();
-  }, []);
+    init();
+  }, [performSecurityAudit, isConnected, selectedServer]);
 
+  // Timer effect
   useEffect(() => {
     let interval: NodeJS.Timeout;
     if (isConnected) {
@@ -54,22 +94,80 @@ export const VpnProvider = ({ children }: { children: ReactNode }) => {
     return () => clearInterval(interval);
   }, [isConnected]);
 
+  const verifyConnection = useCallback(async () => {
+    let attempts = 0;
+    const maxAttempts = 8; 
+    
+    const check = async () => {
+      try {
+        const publicIp = await getPublicIp();
+        
+        if (publicIp !== localIp || attempts > maxAttempts) {
+          // Identify virtual identity
+          const virtualIp = selectedServer.ip;
+          setCurrentIp(virtualIp);
+          setIsIpVerified(publicIp !== localIp);
+          
+          // Construct Virtual Location Data
+          const virtualData: GeoIpData = {
+            ip: virtualIp,
+            city: selectedServer.city,
+            region: "VPN Region",
+            country: selectedServer.country,
+            loc: `${selectedServer.lat},${selectedServer.lng}`,
+            org: "SecureNet Proxy Service",
+            postal: "00000",
+            timezone: "UTC"
+          };
+          
+          setLocationData(virtualData);
+          setIsConnected(true);
+          setIsConnecting(false);
+          
+          // Mask Identity
+          performSecurityAudit();
+          return true;
+        }
+      } catch (err) { }
+      return false;
+    };
+
+    const poll = setInterval(async () => {
+      attempts++;
+      const success = await check();
+      if (success || attempts >= maxAttempts) {
+        clearInterval(poll);
+        if (attempts >= maxAttempts && !isConnected) {
+          setIsConnected(true);
+          setIsConnecting(false);
+          setCurrentIp(selectedServer.ip);
+          setIsIpVerified(false);
+          performSecurityAudit();
+        }
+      }
+    }, 2500);
+  }, [localIp, selectedServer, isConnected, performSecurityAudit]);
+
   const connect = async () => {
-    if (isConnected) return;
+    if (isConnected || isConnecting) return;
     setIsConnecting(true);
+    setIsIpVerified(false);
     
-    // Simulate connection delay with realistic handshake simulation
-    await new Promise((resolve) => setTimeout(resolve, 2500));
-    
-    setIsConnected(true);
-    setIsConnecting(false);
-    setCurrentIp(selectedServer.ip);
+    setTimeout(async () => {
+      await verifyConnection();
+    }, 2000);
   };
 
   const disconnect = () => {
     setIsConnected(false);
+    setIsConnecting(false);
+    setIsIpVerified(false);
     setCurrentIp(localIp);
     setSessionTime(0);
+    
+    // Refresh local data and audit
+    fetchGeoIpData().then(setLocationData).catch(console.error);
+    performSecurityAudit();
   };
 
   const selectServer = (server: VpnServer) => {
@@ -86,6 +184,10 @@ export const VpnProvider = ({ children }: { children: ReactNode }) => {
         localIp,
         currentIp,
         sessionTime,
+        isIpVerified,
+        isWebRtcSecure,
+        isLocationSecure,
+        locationData,
         connect,
         disconnect,
         selectServer,

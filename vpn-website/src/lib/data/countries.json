@@ -1,252 +1,1752 @@
 [
-  {"name":"Ivory Coast","flag":"🇨🇮","code":"CI","latling":[8.0,-5.0],"capital":"Yamoussoukro"},
-  {"name":"Italy","flag":"🇮🇹","code":"IT","latling":[42.83333333,12.83333333],"capital":"Rome"},
-  {"name":"Kyrgyzstan","flag":"🇰🇬","code":"KG","latling":[41.0,75.0],"capital":"Bishkek"},
-  {"name":"Papua New Guinea","flag":"🇵🇬","code":"PG","latling":[-6.0,147.0],"capital":"Port Moresby"},
-  {"name":"Fiji","flag":"🇫🇯","code":"FJ","latling":[-17.7134,178.065],"capital":"Suva"},
-  {"name":"United Arab Emirates","flag":"🇦🇪","code":"AE","latling":[24.0,54.0],"capital":"Abu Dhabi"},
-  {"name":"Saint Kitts and Nevis","flag":"🇰🇳","code":"KN","latling":[17.33333333,-62.75],"capital":"Basseterre"},
-  {"name":"French Guiana","flag":"🇬🇫","code":"GF","latling":[4.0,-53.0],"capital":"Cayenne"},
-  {"name":"Tanzania","flag":"🇹🇿","code":"TZ","latling":[-6.0,35.0],"capital":"Dodoma"},
-  {"name":"Angola","flag":"🇦🇴","code":"AO","latling":[-12.5,18.5],"capital":"Luanda"},
-  {"name":"Togo","flag":"🇹🇬","code":"TG","latling":[8.0,1.16666666],"capital":"Lomé"},
-  {"name":"Finland","flag":"🇫🇮","code":"FI","latling":[64.0,26.0],"capital":"Helsinki"},
-  {"name":"Malawi","flag":"🇲🇼","code":"MW","latling":[-13.5,34.0],"capital":"Lilongwe"},
-  {"name":"Mali","flag":"🇲🇱","code":"ML","latling":[17.0,-4.0],"capital":"Bamako"},
-  {"name":"Uzbekistan","flag":"🇺🇿","code":"UZ","latling":[41.0,64.0],"capital":"Tashkent"},
-  {"name":"Senegal","flag":"🇸🇳","code":"SN","latling":[14.0,-14.0],"capital":"Dakar"},
-  {"name":"Uganda","flag":"🇺🇬","code":"UG","latling":[1.0,32.0],"capital":"Kampala"},
-  {"name":"Djibouti","flag":"🇩🇯","code":"DJ","latling":[11.5,43.0],"capital":"Djibouti"},
-  {"name":"South Sudan","flag":"🇸🇸","code":"SS","latling":[7.0,30.0],"capital":"Juba"},
-  {"name":"Jersey","flag":"🇯🇪","code":"JE","latling":[49.25,-2.16666666],"capital":"Saint Helier"},
-  {"name":"Tuvalu","flag":"🇹🇻","code":"TV","latling":[-8.0,178.0],"capital":"Funafuti"},
-  {"name":"Japan","flag":"🇯🇵","code":"JP","latling":[36.0,138.0],"capital":"Tokyo"},
-  {"name":"Oman","flag":"🇴🇲","code":"OM","latling":[21.0,57.0],"capital":"Muscat"},
-  {"name":"Belgium","flag":"🇧🇪","code":"BE","latling":[50.83333333,4.0],"capital":"Brussels"},
-  {"name":"Saint Martin","flag":"🇲🇫","code":"MF","latling":[18.0708,-63.0501],"capital":"Marigot"},
-  {"name":"Mayotte","flag":"🇾🇹","code":"YT","latling":[-12.83333333,45.16666666],"capital":"Mamoudzou"},
-  {"name":"France","flag":"🇫🇷","code":"FR","latling":[46.0,2.0],"capital":"Paris"},
-  {"name":"Bulgaria","flag":"🇧🇬","code":"BG","latling":[43.0,25.0],"capital":"Sofia"},
-  {"name":"Cyprus","flag":"🇨🇾","code":"CY","latling":[35.0,33.0],"capital":"Nicosia"},
-  {"name":"South Korea","flag":"🇰🇷","code":"KR","latling":[37.0,127.5],"capital":"Seoul"},
-  {"name":"Mexico","flag":"🇲🇽","code":"MX","latling":[23.0,-102.0],"capital":"Mexico City"},
-  {"name":"North Macedonia","flag":"🇲🇰","code":"MK","latling":[41.83333333,22.0],"capital":"Skopje"},
-  {"name":"Guyana","flag":"🇬🇾","code":"GY","latling":[5.0,-59.0],"capital":"Georgetown"},
-  {"name":"Kosovo","flag":"🇽🇰","code":"XK","latling":[42.666667,21.166667],"capital":"Pristina"},
-  {"name":"Morocco","flag":"🇲🇦","code":"MA","latling":[32.0,-5.0],"capital":"Rabat"},
-  {"name":"Gibraltar","flag":"🇬🇮","code":"GI","latling":[36.13333333,-5.35],"capital":"Gibraltar"},
-  {"name":"Western Sahara","flag":"🇪🇭","code":"EH","latling":[24.5,-13.0],"capital":"El Aaiún"},
-  {"name":"Andorra","flag":"🇦🇩","code":"AD","latling":[42.5,1.5],"capital":"Andorra la Vella"},
-  {"name":"Palau","flag":"🇵🇼","code":"PW","latling":[7.5,134.5],"capital":"Ngerulmud"},
-  {"name":"Guinea","flag":"🇬🇳","code":"GN","latling":[11.0,-10.0],"capital":"Conakry"},
-  {"name":"Turks and Caicos Islands","flag":"🇹🇨","code":"TC","latling":[21.75,-71.58333333],"capital":"Cockburn Town"},
-  {"name":"Saudi Arabia","flag":"🇸🇦","code":"SA","latling":[25.0,45.0],"capital":"Riyadh"},
-  {"name":"Botswana","flag":"🇧🇼","code":"BW","latling":[-22.0,24.0],"capital":"Gaborone"},
-  {"name":"Comoros","flag":"🇰🇲","code":"KM","latling":[-12.16666666,44.25],"capital":"Moroni"},
-  {"name":"Belize","flag":"🇧🇯","code":"BZ","latling":[17.25,-88.75],"capital":"Belmopan"},
-  {"name":"Cambodia","flag":"🇰🇭","code":"KH","latling":[13.0,105.0],"capital":"Phnom Penh"},
-  {"name":"Saint Lucia","flag":"🇱🇨","code":"LC","latling":[13.88333333,-60.96666666],"capital":"Castries"},
-  {"name":"Mauritania","flag":"🇲🇷","code":"MR","latling":[20.0,-12.0],"capital":"Nouakchott"},
-  {"name":"Jamaica","flag":"🇯🇲","code":"JM","latling":[18.25,-77.5],"capital":"Kingston"},
-  {"name":"Cape Verde","flag":"🇨🇻","code":"CV","latling":[16.5388,-23.0418],"capital":"Praia"},
-  {"name":"Marshall Islands","flag":"🇲🇭","code":"MH","latling":[9.0,168.0],"capital":"Majuro"},
-  {"name":"Namibia","flag":"🇳🇦","code":"NA","latling":[-22.0,17.0],"capital":"Windhoek"},
-  {"name":"Iran","flag":"🇮🇷","code":"IR","latling":[32.0,53.0],"capital":"Tehran"},
-  {"name":"Wallis and Futuna","flag":"🇼🇫","code":"WF","latling":[-13.3,-176.2],"capital":"Mata-Utu"},
-  {"name":"Azerbaijan","flag":"🇦🇿","code":"AZ","latling":[40.5,47.5],"capital":"Baku"},
-  {"name":"Niger","flag":"🇳🇪","code":"NE","latling":[16.0,8.0],"capital":"Niamey"},
-  {"name":"Heard Island and McDonald Islands","flag":"🇭🇲","code":"HM","latling":[-53.0818,73.5042],"capital":null},
-  {"name":"Laos","flag":"🇱🇦","code":"LA","latling":[18.0,105.0],"capital":"Vientiane"},
-  {"name":"Burkina Faso","flag":"🇧🇫","code":"BF","latling":[13.0,-2.0],"capital":"Ouagadougou"},
-  {"name":"Cocos (Keeling) Islands","flag":"🇨🇨","code":"CC","latling":[-12.1642,96.871],"capital":"West Island"},
-  {"name":"Luxembourg","flag":"🇱🇺","code":"LU","latling":[49.75,6.16666666],"capital":"Luxembourg"},
-  {"name":"Indonesia","flag":"🇮🇩","code":"ID","latling":[-5.0,120.0],"capital":"Jakarta"},
-  {"name":"Lebanon","flag":"🇱🇧","code":"LB","latling":[33.83333333,35.83333333],"capital":"Beirut"},
-  {"name":"Turkey","flag":"🇹🇷","code":"TR","latling":[39.0,35.0],"capital":"Ankara"},
-  {"name":"Timor-Leste","flag":"🇹🇱","code":"TL","latling":[-8.83333333,125.91666666],"capital":"Dili"},
-  {"name":"Zimbabwe","flag":"🇿🇼","code":"ZW","latling":[-20.0,30.0],"capital":"Harare"},
-  {"name":"South Africa","flag":"🇿🇦","code":"ZA","latling":[-29.0,24.0],"capital":"Pretoria"},
-  {"name":"Armenia","flag":"🇦🇲","code":"AM","latling":[40.0,45.0],"capital":"Yerevan"},
-  {"name":"Ireland","flag":"🇮🇪","code":"IE","latling":[53.0,-8.0],"capital":"Dublin"},
-  {"name":"Norway","flag":"🇳🇴","code":"NO","latling":[62.0,10.0],"capital":"Oslo"},
-  {"name":"Kenya","flag":"🇰🇪","code":"KE","latling":[1.0,38.0],"capital":"Nairobi"},
-  {"name":"North Korea","flag":"🇰🇵","code":"KP","latling":[40.0,127.0],"capital":"Pyongyang"},
-  {"name":"Afghanistan","flag":"🇦🇫","code":"AF","latling":[33.0,65.0],"capital":"Kabul"},
-  {"name":"Bermuda","flag":"🇧🇲","code":"BM","latling":[32.33333333,-64.75],"capital":"Hamilton"},
-  {"name":"Spain","flag":"🇪🇸","code":"ES","latling":[40.0,-4.0],"capital":"Madrid"},
-  {"name":"Netherlands","flag":"🇳🇱","code":"NL","latling":[52.5,5.75],"capital":"Amsterdam"},
-  {"name":"Nicaragua","flag":"🇳🇮","code":"NI","latling":[13.0,-85.0],"capital":"Managua"},
-  {"name":"Lesotho","flag":"🇱🇸","code":"LS","latling":[-29.5,28.5],"capital":"Maseru"},
-  {"name":"Egypt","flag":"🇪🇬","code":"EG","latling":[27.0,30.0],"capital":"Cairo"},
-  {"name":"Gambia","flag":"🇬🇲","code":"GM","latling":[13.46666666,-16.56666666],"capital":"Banjul"},
-  {"name":"Brazil","flag":"🇧🇷","code":"BR","latling":[-10.0,-55.0],"capital":"Brasília"},
-  {"name":"Australia","flag":"🇦🇺","code":"AU","latling":[-27.0,133.0],"capital":"Canberra"},
-  {"name":"Bouvet Island","flag":"🇧🇻","code":"BV","latling":[-54.4208,3.3464],"capital":null},
-  {"name":"Pitcairn Islands","flag":"🇵🇳","code":"PN","latling":[-25.06666666,-130.1],"capital":"Adamstown"},
-  {"name":"Barbados","flag":"🇧🇧","code":"BB","latling":[13.16666666,-59.53333333],"capital":"Bridgetown"},
-  {"name":"Madagascar","flag":"🇲🇬","code":"MG","latling":[-20.0,47.0],"capital":"Antananarivo"},
-  {"name":"United Kingdom","flag":"🇬🇧","code":"GB","latling":[54.0,-2.0],"capital":"London"},
-  {"name":"Portugal","flag":"🇵🇹","code":"PT","latling":[39.5,-8.0],"capital":"Lisbon"},
-  {"name":"Greenland","flag":"🇬🇱","code":"GL","latling":[72.0,-40.0],"capital":"Nuuk"},
-  {"name":"American Samoa","flag":"🇦🇸","code":"AS","latling":[-14.33333333,-170.0],"capital":"Pago Pago"},
-  {"name":"South Georgia","flag":"🇬🇸","code":"GS","latling":[-54.5,-37.0],"capital":"King Edward Point"},
-  {"name":"Turkmenistan","flag":"🇹🇲","code":"TM","latling":[40.0,60.0],"capital":"Ashgabat"},
-  {"name":"Guadeloupe","flag":"🇬🇵","code":"GP","latling":[16.25,-61.583333],"capital":"Basse-Terre"},
-  {"name":"Dominica","flag":"🇩🇲","code":"DM","latling":[15.41666666,-61.33333333],"capital":"Roseau"},
-  {"name":"Solomon Islands","flag":"🇸🇧","code":"SB","latling":[-8.0,159.0],"capital":"Honiara"},
-  {"name":"Saint Pierre and Miquelon","flag":"🇵🇲","code":"PM","latling":[46.83333333,-56.33333333],"capital":"Saint-Pierre"},
-  {"name":"Rwanda","flag":"🇷🇼","code":"RW","latling":[-2.0,30.0],"capital":"Kigali"},
-  {"name":"Norfolk Island","flag":"🇳🇫","code":"NF","latling":[-29.03333333,167.95],"capital":"Kingston"},
-  {"name":"Panama","flag":"🇵🇦","code":"PA","latling":[9.0,-80.0],"capital":"Panama City"},
-  {"name":"Bahamas","flag":"🇧🇸","code":"BS","latling":[25.0343,-77.3963],"capital":"Nassau"},
-  {"name":"Tokelau","flag":"🇹🇰","code":"TK","latling":[-9.0,-172.0],"capital":"Fakaofo"},
-  {"name":"Montenegro","flag":"🇲🇪","code":"ME","latling":[42.5,19.3],"capital":"Podgorica"},
-  {"name":"Åland Islands","flag":"🇦🇽","code":"AX","latling":[60.116667,19.9],"capital":"Mariehamn"},
-  {"name":"Niue","flag":"🇳🇺","code":"NU","latling":[-19.03333333,-169.86666666],"capital":"Alofi"},
-  {"name":"Argentina","flag":"🇦🇷","code":"AR","latling":[-34.0,-64.0],"capital":"Buenos Aires"},
-  {"name":"Cuba","flag":"🇨🇺","code":"CU","latling":[21.5,-80.0],"capital":"Havana"},
-  {"name":"Cayman Islands","flag":"🇰🇾","code":"KY","latling":[19.3133,-81.2546],"capital":"George Town"},
-  {"name":"Kazakhstan","flag":"🇰🇿","code":"KZ","latling":[48.0196,66.9237],"capital":"Astana"},
-  {"name":"Russia","flag":"🇷🇺","code":"RU","latling":[60.0,100.0],"capital":"Moscow"},
-  {"name":"India","flag":"🇮🇳","code":"IN","latling":[20.0,77.0],"capital":"New Delhi"},
-  {"name":"British Virgin Islands","flag":"🇻🇬","code":"VG","latling":[18.431383,-64.62305],"capital":"Road Town"},
-  {"name":"Guam","flag":"🇬🇺","code":"GU","latling":[13.46666666,144.78333333],"capital":"Hagåtña"},
-  {"name":"Myanmar","flag":"🇲🇲","code":"MM","latling":[22.0,98.0],"capital":"Naypyidaw"},
-  {"name":"DR Congo","flag":"🇨🇩","code":"CD","latling":[0.0,25.0],"capital":"Kinshasa"},
-  {"name":"Mauritius","flag":"🇲🇺","code":"MU","latling":[-20.28333333,57.55],"capital":"Port Louis"},
-  {"name":"Falkland Islands","flag":"🇫🇰","code":"FK","latling":[-51.75,-59.0],"capital":"Stanley"},
-  {"name":"Northern Mariana Islands","flag":"🇲🇵","code":"MP","latling":[15.2,145.75],"capital":"Saipan"},
-  {"name":"Ukraine","flag":"🇺🇦","code":"UA","latling":[49.0,32.0],"capital":"Kyiv"},
-  {"name":"Monaco","flag":"🇲🇨","code":"MC","latling":[43.73333333,7.4],"capital":"Monaco"},
-  {"name":"Tajikistan","flag":"🇹🇯","code":"TJ","latling":[39.0,71.0],"capital":"Dushanbe"},
-  {"name":"Malaysia","flag":"🇲🇾","code":"MY","latling":[2.5,112.5],"capital":"Kuala Lumpur"},
-  {"name":"Somalia","flag":"🇸🇴","code":"SO","latling":[10.0,49.0],"capital":"Mogadishu"},
-  {"name":"Antigua and Barbuda","flag":"🇦🇬","code":"AG","latling":[17.05,-61.8],"capital":"Saint John's"},
-  {"name":"Central African Republic","flag":"🇨🇫","code":"CF","latling":[7.0,21.0],"capital":"Bangui"},
-  {"name":"Macau","flag":"🇲🇴","code":"MO","latling":[22.16666666,113.55],"capital":null},
-  {"name":"Israel","flag":"🇮🇱","code":"IL","latling":[31.47,35.13],"capital":"Jerusalem"},
-  {"name":"Nigeria","flag":"🇳🇬","code":"NG","latling":[10.0,8.0],"capital":"Abuja"},
-  {"name":"Honduras","flag":"🇭🇳","code":"HN","latling":[15.0,-86.5],"capital":"Tegucigalpa"},
-  {"name":"Sierra Leone","flag":"🇸🇱","code":"SL","latling":[8.5,-11.5],"capital":"Freetown"},
-  {"name":"Tunisia","flag":"🇹🇳","code":"TN","latling":[34.0,9.0],"capital":"Tunis"},
-  {"name":"Lithuania","flag":"🇱🇹","code":"LT","latling":[56.0,24.0],"capital":"Vilnius"},
-  {"name":"Iraq","flag":"🇮🇶","code":"IQ","latling":[33.0,44.0],"capital":"Baghdad"},
-  {"name":"Switzerland","flag":"🇨🇭","code":"CH","latling":[47.0,8.0],"capital":"Bern"},
-  {"name":"Chile","flag":"🇨🇱","code":"CL","latling":[-30.0,-71.0],"capital":"Santiago"},
-  {"name":"Taiwan","flag":"🇹🇼","code":"TW","latling":[23.5,121.0],"capital":"Taipei"},
-  {"name":"Vietnam","flag":"🇻🇳","code":"VN","latling":[16.16666666,107.83333333],"capital":"Hanoi"},
-  {"name":"Bangladesh","flag":"🇧🇩","code":"BD","latling":[24.0,90.0],"capital":"Dhaka"},
-  {"name":"Vanuatu","flag":"🇻🇺","code":"VU","latling":[-16.0,167.0],"capital":"Port Vila"},
-  {"name":"Pakistan","flag":"🇵🇰","code":"PK","latling":[30.0,70.0],"capital":"Islamabad"},
-  {"name":"Latvia","flag":"🇱🇻","code":"LV","latling":[57.0,25.0],"capital":"Riga"},
-  {"name":"Malta","flag":"🇲🇹","code":"MT","latling":[35.9375,14.3754],"capital":"Valletta"},
-  {"name":"Seychelles","flag":"🇸🇨","code":"SC","latling":[-4.58333333,55.66666666],"capital":"Victoria"},
-  {"name":"Montserrat","flag":"🇲🇸","code":"MS","latling":[16.75,-62.2],"capital":"Plymouth"},
-  {"name":"Anguilla","flag":"🇦🇮","code":"AI","latling":[18.25,-63.16666666],"capital":"The Valley"},
-  {"name":"Greece","flag":"🇬🇷","code":"GR","latling":[39.0,22.0],"capital":"Athens"},
-  {"name":"Czechia","flag":"🇨🇿","code":"CZ","latling":[49.75,15.5],"capital":"Prague"},
-  {"name":"Zambia","flag":"🇿🇲","code":"ZM","latling":[-15.0,30.0],"capital":"Lusaka"},
-  {"name":"Hong Kong","flag":"🇭🇰","code":"HK","latling":[22.267,114.188],"capital":"City of Victoria"},
-  {"name":"United States","flag":"🇺🇸","code":"US","latling":[38.0,-97.0],"capital":"Washington, D.C."},
-  {"name":"Eswatini","flag":"🇸🇿","code":"SZ","latling":[-26.5,31.5],"capital":"Mbabane"},
-  {"name":"Slovenia","flag":"🇸🇮","code":"SI","latling":[46.11666666,14.81666666],"capital":"Ljubljana"},
-  {"name":"Caribbean Netherlands","flag":"🇧🇶","code":"BQ","latling":[12.18,-68.25],"capital":"Kralendijk"},
-  {"name":"Maldives","flag":"🇲🇻","code":"MV","latling":[3.25,73.0],"capital":"Malé"},
-  {"name":"Ghana","flag":"🇬🇭","code":"GH","latling":[8.0,-2.0],"capital":"Accra"},
-  {"name":"Paraguay","flag":"🇵🇾","code":"PY","latling":[-23.0,-58.0],"capital":"Asunción"},
-  {"name":"Mozambique","flag":"🇲🇿","code":"MZ","latling":[-18.25,35.0],"capital":"Maputo"},
-  {"name":"Palestine","flag":"🇵🇸","code":"PS","latling":[31.9,35.2],"capital":"Ramallah"},
-  {"name":"Moldova","flag":"🇲🇩","code":"MD","latling":[47.0,29.0],"capital":"Chișinău"},
-  {"name":"Liberia","flag":"🇱🇷","code":"LR","latling":[6.5,-9.5],"capital":"Monrovia"},
-  {"name":"Liechtenstein","flag":"🇱🇮","code":"LI","latling":[47.26666666,9.53333333],"capital":"Vaduz"},
-  {"name":"Peru","flag":"🇵🇪","code":"PE","latling":[-10.0,-76.0],"capital":"Lima"},
-  {"name":"Qatar","flag":"🇶🇦","code":"QA","latling":[25.5,51.25],"capital":"Doha"},
-  {"name":"Christmas Island","flag":"🇨🇽","code":"CX","latling":[-10.5,105.66666666],"capital":"Flying Fish Cove"},
-  {"name":"Georgia","flag":"🇬🇪","code":"GE","latling":[42.0,43.5],"capital":"Tbilisi"},
-  {"name":"Ecuador","flag":"🇪🇨","code":"EC","latling":[-2.0,-77.5],"capital":"Quito"},
-  {"name":"Philippines","flag":"🇵🇭","code":"PH","latling":[13.0,122.0],"capital":"Manila"},
-  {"name":"Ethiopia","flag":"🇪🇹","code":"ET","latling":[8.0,38.0],"capital":"Addis Ababa"},
-  {"name":"United States Virgin Islands","flag":"🇻🇮","code":"VI","latling":[18.35,-64.933333],"capital":"Charlotte Amalie"},
-  {"name":"Syria","flag":"🇸🇾","code":"SY","latling":[35.0,38.0],"capital":"Damascus"},
-  {"name":"Romania","flag":"🇷🇴","code":"RO","latling":[46.0,25.0],"capital":"Bucharest"},
-  {"name":"Guatemala","flag":"🇬🇹","code":"GT","latling":[15.5,-90.25],"capital":"Guatemala City"},
-  {"name":"Nepal","flag":"🇳🇵","code":"NP","latling":[28.0,84.0],"capital":"Kathmandu"},
-  {"name":"Réunion","flag":"🇷🇪","code":"RE","latling":[-21.15,55.5],"capital":"Saint-Denis"},
-  {"name":"Benin","flag":"🇧🇯","code":"BJ","latling":[9.5,2.25],"capital":"Porto-Novo"},
-  {"name":"Kuwait","flag":"🇰🇼","code":"KW","latling":[29.5,45.75],"capital":"Kuwait City"},
-  {"name":"Suriname","flag":"🇸🇷","code":"SR","latling":[4.0,-56.0],"capital":"Paramaribo"},
-  {"name":"New Caledonia","flag":"🇳🇨","code":"NC","latling":[-21.5,165.5],"capital":"Nouméa"},
-  {"name":"Sudan","flag":"🇸🇩","code":"SD","latling":[15.0,30.0],"capital":"Khartoum"},
-  {"name":"United States Minor Outlying Islands","flag":"🇺🇲","code":"UM","latling":[19.3,166.633333],"capital":"Washington DC"},
-  {"name":"Chad","flag":"🇹🇩","code":"TD","latling":[15.0,19.0],"capital":"N'Djamena"},
-  {"name":"Uruguay","flag":"🇺🇾","code":"UY","latling":[-33.0,-56.0],"capital":"Montevideo"},
-  {"name":"Bosnia and Herzegovina","flag":"🇧🇦","code":"BA","latling":[44.0,18.0],"capital":"Sarajevo"},
-  {"name":"Trinidad and Tobago","flag":"🇹🇹","code":"TT","latling":[10.6918,-61.2225],"capital":"Port of Spain"},
-  {"name":"Sweden","flag":"🇸🇪","code":"SE","latling":[62.0,15.0],"capital":"Stockholm"},
-  {"name":"Iceland","flag":"🇮🇸","code":"IS","latling":[65.0,-18.0],"capital":"Reykjavik"},
-  {"name":"Haiti","flag":"🇭🇹","code":"HT","latling":[19.0,-72.41666666],"capital":"Port-au-Prince"},
-  {"name":"Brunei","flag":"🇧🇳","code":"BN","latling":[4.5,114.66666666],"capital":"Bandar Seri Begawan"},
-  {"name":"French Southern and Antarctic Lands","flag":"🇹🇫","code":"TF","latling":[-49.25,69.167],"capital":"Port-aux-Français"},
-  {"name":"Guernsey","flag":"🇬🇬","code":"GG","latling":[49.46666666,-2.58333333],"capital":"St. Peter Port"},
-  {"name":"Croatia","flag":"🇭🇷","code":"HR","latling":[45.16666666,15.5],"capital":"Zagreb"},
-  {"name":"Saint Barthélemy","flag":"🇧🇱","code":"BL","latling":[18.5,-63.41666666],"capital":"Gustavia"},
-  {"name":"Mongolia","flag":"🇲🇳","code":"MN","latling":[46.0,105.0],"capital":"Ulan Bator"},
-  {"name":"Aruba","flag":"🇦🇼","code":"AW","latling":[12.5,-69.96666666],"capital":"Oranjestad"},
-  {"name":"Republic of the Congo","flag":"🇨🇬","code":"CG","latling":[-1.0,15.0],"capital":"Brazzaville"},
-  {"name":"São Tomé and Príncipe","flag":"🇸🇹","code":"ST","latling":[1.0,7.0],"capital":"São Tomé"},
-  {"name":"Yemen","flag":"🇾🇪","code":"YE","latling":[15.0,48.0],"capital":"Sana'a"},
-  {"name":"Equatorial Guinea","flag":"🇬🇶","code":"GQ","latling":[2.0,10.0],"capital":"Ciudad de la Paz"},
-  {"name":"Svalbard and Jan Mayen","flag":"🇸🇯","code":"SJ","latling":[78.0,20.0],"capital":"Longyearbyen"},
-  {"name":"Colombia","flag":"🇨🇴","code":"CO","latling":[4.0,-72.0],"capital":"Bogotá"},
-  {"name":"Guinea-Bissau","flag":"🇬🇼","code":"GW","latling":[12.0,-15.0],"capital":"Bissau"},
-  {"name":"Kiribati","flag":"🇰🇮","code":"KI","latling":[1.41666666,173.0],"capital":"South Tarawa"},
-  {"name":"Germany","flag":"🇩🇪","code":"DE","latling":[51.0,9.0],"capital":"Berlin"},
-  {"name":"Thailand","flag":"🇹🇭","code":"TH","latling":[15.0,100.0],"capital":"Bangkok"},
-  {"name":"Isle of Man","flag":"🇮🇲","code":"IM","latling":[54.25,-4.5],"capital":"Douglas"},
-  {"name":"Bhutan","flag":"🇧🇹","code":"BT","latling":[27.5,90.5],"capital":"Thimphu"},
-  {"name":"Gabon","flag":"🇬🇦","code":"GA","latling":[-1.0,11.75],"capital":"Libreville"},
-  {"name":"Sint Maarten","flag":"🇸🇽","code":"SX","latling":[18.033333,-63.05],"capital":"Philipsburg"},
-  {"name":"Sri Lanka","flag":"🇱🇰","code":"LK","latling":[7.0,81.0],"capital":"Sri Jayawardenepura Kotte"},
-  {"name":"Albania","flag":"🇦🇱","code":"AL","latling":[41.0,20.0],"capital":"Tirana"},
-  {"name":"New Zealand","flag":"🇳🇿","code":"NZ","latling":[-41.0,174.0],"capital":"Wellington"},
-  {"name":"Algeria","flag":"🇩🇿","code":"DZ","latling":[28.0,3.0],"capital":"Algiers"},
-  {"name":"San Marino","flag":"🇸🇲","code":"SM","latling":[43.76666666,12.41666666],"capital":"City of San Marino"},
-  {"name":"Micronesia","flag":"🇫🇲","code":"FM","latling":[6.91666666,158.25],"capital":"Palikir"},
-  {"name":"Saint Helena, Ascension and Tristan da Cunha","flag":"🇸🇭","code":"SH","latling":[-15.95,-5.72],"capital":"Jamestown"},
-  {"name":"Curaçao","flag":"🇨🇼","code":"CW","latling":[12.116667,-68.933333],"capital":"Willemstad"},
-  {"name":"El Salvador","flag":"🇸🇻","code":"SV","latling":[13.83333333,-88.91666666],"capital":"San Salvador"},
-  {"name":"Martinique","flag":"🇲🇶","code":"MQ","latling":[14.666667,-61.0],"capital":"Fort-de-France"},
-  {"name":"Nauru","flag":"🇳🇷","code":"NR","latling":[-0.53333333,166.91666666],"capital":"Yaren"},
-  {"name":"Vatican City","flag":"🇻🇦","code":"VA","latling":[41.9,12.45],"capital":"Vatican City"},
-  {"name":"Grenada","flag":"🇬🇩","code":"GD","latling":[12.11666666,-61.66666666],"capital":"St. George's"},
-  {"name":"Tonga","flag":"🇹🇴","code":"TO","latling":[-20.0,-175.0],"capital":"Nuku'alofa"},
-  {"name":"Burundi","flag":"🇧🇮","code":"BI","latling":[-3.5,30.0],"capital":"Gitega"},
-  {"name":"Samoa","flag":"🇼🇸","code":"WS","latling":[-13.58333333,-172.33333333],"capital":"Apia"},
-  {"name":"Denmark","flag":"🇩🇰","code":"DK","latling":[56.0,10.0],"capital":"Copenhagen"},
-  {"name":"Venezuela","flag":"🇻🇪","code":"VE","latling":[8.0,-66.0],"capital":"Caracas"},
-  {"name":"Austria","flag":"🇦🇹","code":"AT","latling":[47.33333333,13.33333333],"capital":"Vienna"},
-  {"name":"Slovakia","flag":"🇸🇰","code":"SK","latling":[48.66666666,19.5],"capital":"Bratislava"},
-  {"name":"China","flag":"🇨🇳","code":"CN","latling":[35.0,105.0],"capital":"Beijing"},
-  {"name":"British Indian Ocean Territory","flag":"🇮🇴","code":"IO","latling":[-6.0,71.5],"capital":"Diego Garcia"},
-  {"name":"French Polynesia","flag":"🇵🇫","code":"PF","latling":[-17.6797,-149.4068],"capital":"Papeetē"},
-  {"name":"Bolivia","flag":"🇧🇴","code":"BO","latling":[-17.0,-65.0],"capital":"Sucre"},
-  {"name":"Antarctica","flag":"🇦🇶","code":"AQ","latling":[-90.0,0.0],"capital":null},
-  {"name":"Libya","flag":"🇱🇾","code":"LY","latling":[25.0,17.0],"capital":"Tripoli"},
-  {"name":"Estonia","flag":"🇪🇪","code":"EE","latling":[59.0,26.0],"capital":"Tallinn"},
-  {"name":"Cook Islands","flag":"🇨🇰","code":"CK","latling":[-21.23333333,-159.76666666],"capital":"Avarua"},
-  {"name":"Puerto Rico","flag":"🇵🇷","code":"PR","latling":[18.25,-66.5],"capital":"San Juan"},
-  {"name":"Belarus","flag":"🇧🇾","code":"BY","latling":[53.0,28.0],"capital":"Minsk"},
-  {"name":"Faroe Islands","flag":"🇫🇴","code":"FO","latling":[62.0,-7.0],"capital":"Tórshavn"},
-  {"name":"Saint Vincent and the Grenadines","flag":"🇻🇨","code":"VC","latling":[13.25,-61.2],"capital":"Kingstown"},
-  {"name":"Dominican Republic","flag":"🇩🇴","code":"DO","latling":[19.0,-70.66666666],"capital":"Santo Domingo"},
-  {"name":"Hungary","flag":"🇭🇺","code":"HU","latling":[47.0,20.0],"capital":"Budapest"},
-  {"name":"Bahrain","flag":"🇧🇭","code":"BH","latling":[26.0,50.55],"capital":"Manama"},
-  {"name":"Cameroon","flag":"🇨🇲","code":"CM","latling":[6.0,12.0],"capital":"Yaoundé"},
-  {"name":"Canada","flag":"🇨🇦","code":"CA","latling":[60.0,-95.0],"capital":"Ottawa"},
-  {"name":"Eritrea","flag":"🇪🇷","code":"ER","latling":[15.0,39.0],"capital":"Asmara"},
-  {"name":"Singapore","flag":"🇸🇬","code":"SG","latling":[1.36666666,103.8],"capital":"Singapore"},
-  {"name":"Costa Rica","flag":"🇨🇷","code":"CR","latling":[10.0,-84.0],"capital":"San José"},
-  {"name":"Serbia","flag":"🇷🇸","code":"RS","latling":[44.0,21.0],"capital":"Belgrade"},
-  {"name":"Poland","flag":"🇵🇱","code":"PL","latling":[52.0,20.0],"capital":"Warsaw"},
-  {"name":"Jordan","flag":"🇯🇴","code":"JO","latling":[31.0,36.0],"capital":"Amman"}
+  {
+    "name": "Ivory Coast",
+    "flag": "🇨🇮",
+    "code": "CI",
+    "latling": [8.0, -5.0],
+    "capital": "Yamoussoukro"
+  },
+  {
+    "name": "Italy",
+    "flag": "🇮🇹",
+    "code": "IT",
+    "latling": [42.83333333, 12.83333333],
+    "capital": "Rome"
+  },
+  {
+    "name": "Kyrgyzstan",
+    "flag": "🇰🇬",
+    "code": "KG",
+    "latling": [41.0, 75.0],
+    "capital": "Bishkek"
+  },
+  {
+    "name": "Papua New Guinea",
+    "flag": "🇵🇬",
+    "code": "PG",
+    "latling": [-6.0, 147.0],
+    "capital": "Port Moresby"
+  },
+  {
+    "name": "Fiji",
+    "flag": "🇫🇯",
+    "code": "FJ",
+    "latling": [-17.7134, 178.065],
+    "capital": "Suva"
+  },
+  {
+    "name": "United Arab Emirates",
+    "flag": "🇦🇪",
+    "code": "AE",
+    "latling": [24.0, 54.0],
+    "capital": "Abu Dhabi"
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "flag": "🇰🇳",
+    "code": "KN",
+    "latling": [17.33333333, -62.75],
+    "capital": "Basseterre"
+  },
+  {
+    "name": "French Guiana",
+    "flag": "🇬🇫",
+    "code": "GF",
+    "latling": [4.0, -53.0],
+    "capital": "Cayenne"
+  },
+  {
+    "name": "Tanzania",
+    "flag": "🇹🇿",
+    "code": "TZ",
+    "latling": [-6.0, 35.0],
+    "capital": "Dodoma"
+  },
+  {
+    "name": "Angola",
+    "flag": "🇦🇴",
+    "code": "AO",
+    "latling": [-12.5, 18.5],
+    "capital": "Luanda"
+  },
+  {
+    "name": "Togo",
+    "flag": "🇹🇬",
+    "code": "TG",
+    "latling": [8.0, 1.16666666],
+    "capital": "Lomé"
+  },
+  {
+    "name": "Finland",
+    "flag": "🇫🇮",
+    "code": "FI",
+    "latling": [64.0, 26.0],
+    "capital": "Helsinki"
+  },
+  {
+    "name": "Malawi",
+    "flag": "🇲🇼",
+    "code": "MW",
+    "latling": [-13.5, 34.0],
+    "capital": "Lilongwe"
+  },
+  {
+    "name": "Mali",
+    "flag": "🇲🇱",
+    "code": "ML",
+    "latling": [17.0, -4.0],
+    "capital": "Bamako"
+  },
+  {
+    "name": "Uzbekistan",
+    "flag": "🇺🇿",
+    "code": "UZ",
+    "latling": [41.0, 64.0],
+    "capital": "Tashkent"
+  },
+  {
+    "name": "Senegal",
+    "flag": "🇸🇳",
+    "code": "SN",
+    "latling": [14.0, -14.0],
+    "capital": "Dakar"
+  },
+  {
+    "name": "Uganda",
+    "flag": "🇺🇬",
+    "code": "UG",
+    "latling": [1.0, 32.0],
+    "capital": "Kampala"
+  },
+  {
+    "name": "Djibouti",
+    "flag": "🇩🇯",
+    "code": "DJ",
+    "latling": [11.5, 43.0],
+    "capital": "Djibouti"
+  },
+  {
+    "name": "South Sudan",
+    "flag": "🇸🇸",
+    "code": "SS",
+    "latling": [7.0, 30.0],
+    "capital": "Juba"
+  },
+  {
+    "name": "Jersey",
+    "flag": "🇯🇪",
+    "code": "JE",
+    "latling": [49.25, -2.16666666],
+    "capital": "Saint Helier"
+  },
+  {
+    "name": "Tuvalu",
+    "flag": "🇹🇻",
+    "code": "TV",
+    "latling": [-8.0, 178.0],
+    "capital": "Funafuti"
+  },
+  {
+    "name": "Japan",
+    "flag": "🇯🇵",
+    "code": "JP",
+    "latling": [36.0, 138.0],
+    "capital": "Tokyo"
+  },
+  {
+    "name": "Oman",
+    "flag": "🇴🇲",
+    "code": "OM",
+    "latling": [21.0, 57.0],
+    "capital": "Muscat"
+  },
+  {
+    "name": "Belgium",
+    "flag": "🇧🇪",
+    "code": "BE",
+    "latling": [50.83333333, 4.0],
+    "capital": "Brussels"
+  },
+  {
+    "name": "Saint Martin",
+    "flag": "🇲🇫",
+    "code": "MF",
+    "latling": [18.0708, -63.0501],
+    "capital": "Marigot"
+  },
+  {
+    "name": "Mayotte",
+    "flag": "🇾🇹",
+    "code": "YT",
+    "latling": [-12.83333333, 45.16666666],
+    "capital": "Mamoudzou"
+  },
+  {
+    "name": "France",
+    "flag": "🇫🇷",
+    "code": "FR",
+    "latling": [46.0, 2.0],
+    "capital": "Paris"
+  },
+  {
+    "name": "Bulgaria",
+    "flag": "🇧🇬",
+    "code": "BG",
+    "latling": [43.0, 25.0],
+    "capital": "Sofia"
+  },
+  {
+    "name": "Cyprus",
+    "flag": "🇨🇾",
+    "code": "CY",
+    "latling": [35.0, 33.0],
+    "capital": "Nicosia"
+  },
+  {
+    "name": "South Korea",
+    "flag": "🇰🇷",
+    "code": "KR",
+    "latling": [37.0, 127.5],
+    "capital": "Seoul"
+  },
+  {
+    "name": "Mexico",
+    "flag": "🇲🇽",
+    "code": "MX",
+    "latling": [23.0, -102.0],
+    "capital": "Mexico City"
+  },
+  {
+    "name": "North Macedonia",
+    "flag": "🇲🇰",
+    "code": "MK",
+    "latling": [41.83333333, 22.0],
+    "capital": "Skopje"
+  },
+  {
+    "name": "Guyana",
+    "flag": "🇬🇾",
+    "code": "GY",
+    "latling": [5.0, -59.0],
+    "capital": "Georgetown"
+  },
+  {
+    "name": "Kosovo",
+    "flag": "🇽🇰",
+    "code": "XK",
+    "latling": [42.666667, 21.166667],
+    "capital": "Pristina"
+  },
+  {
+    "name": "Morocco",
+    "flag": "🇲🇦",
+    "code": "MA",
+    "latling": [32.0, -5.0],
+    "capital": "Rabat"
+  },
+  {
+    "name": "Gibraltar",
+    "flag": "🇬🇮",
+    "code": "GI",
+    "latling": [36.13333333, -5.35],
+    "capital": "Gibraltar"
+  },
+  {
+    "name": "Western Sahara",
+    "flag": "🇪🇭",
+    "code": "EH",
+    "latling": [24.5, -13.0],
+    "capital": "El Aaiún"
+  },
+  {
+    "name": "Andorra",
+    "flag": "🇦🇩",
+    "code": "AD",
+    "latling": [42.5, 1.5],
+    "capital": "Andorra la Vella"
+  },
+  {
+    "name": "Palau",
+    "flag": "🇵🇼",
+    "code": "PW",
+    "latling": [7.5, 134.5],
+    "capital": "Ngerulmud"
+  },
+  {
+    "name": "Guinea",
+    "flag": "🇬🇳",
+    "code": "GN",
+    "latling": [11.0, -10.0],
+    "capital": "Conakry"
+  },
+  {
+    "name": "Turks and Caicos Islands",
+    "flag": "🇹🇨",
+    "code": "TC",
+    "latling": [21.75, -71.58333333],
+    "capital": "Cockburn Town"
+  },
+  {
+    "name": "Saudi Arabia",
+    "flag": "🇸🇦",
+    "code": "SA",
+    "latling": [25.0, 45.0],
+    "capital": "Riyadh"
+  },
+  {
+    "name": "Botswana",
+    "flag": "🇧🇼",
+    "code": "BW",
+    "latling": [-22.0, 24.0],
+    "capital": "Gaborone"
+  },
+  {
+    "name": "Comoros",
+    "flag": "🇰🇲",
+    "code": "KM",
+    "latling": [-12.16666666, 44.25],
+    "capital": "Moroni"
+  },
+  {
+    "name": "Belize",
+    "flag": "🇧🇯",
+    "code": "BZ",
+    "latling": [17.25, -88.75],
+    "capital": "Belmopan"
+  },
+  {
+    "name": "Cambodia",
+    "flag": "🇰🇭",
+    "code": "KH",
+    "latling": [13.0, 105.0],
+    "capital": "Phnom Penh"
+  },
+  {
+    "name": "Saint Lucia",
+    "flag": "🇱🇨",
+    "code": "LC",
+    "latling": [13.88333333, -60.96666666],
+    "capital": "Castries"
+  },
+  {
+    "name": "Mauritania",
+    "flag": "🇲🇷",
+    "code": "MR",
+    "latling": [20.0, -12.0],
+    "capital": "Nouakchott"
+  },
+  {
+    "name": "Jamaica",
+    "flag": "🇯🇲",
+    "code": "JM",
+    "latling": [18.25, -77.5],
+    "capital": "Kingston"
+  },
+  {
+    "name": "Cape Verde",
+    "flag": "🇨🇻",
+    "code": "CV",
+    "latling": [16.5388, -23.0418],
+    "capital": "Praia"
+  },
+  {
+    "name": "Marshall Islands",
+    "flag": "🇲🇭",
+    "code": "MH",
+    "latling": [9.0, 168.0],
+    "capital": "Majuro"
+  },
+  {
+    "name": "Namibia",
+    "flag": "🇳🇦",
+    "code": "NA",
+    "latling": [-22.0, 17.0],
+    "capital": "Windhoek"
+  },
+  {
+    "name": "Iran",
+    "flag": "🇮🇷",
+    "code": "IR",
+    "latling": [32.0, 53.0],
+    "capital": "Tehran"
+  },
+  {
+    "name": "Wallis and Futuna",
+    "flag": "🇼🇫",
+    "code": "WF",
+    "latling": [-13.3, -176.2],
+    "capital": "Mata-Utu"
+  },
+  {
+    "name": "Azerbaijan",
+    "flag": "🇦🇿",
+    "code": "AZ",
+    "latling": [40.5, 47.5],
+    "capital": "Baku"
+  },
+  {
+    "name": "Niger",
+    "flag": "🇳🇪",
+    "code": "NE",
+    "latling": [16.0, 8.0],
+    "capital": "Niamey"
+  },
+  {
+    "name": "Heard Island and McDonald Islands",
+    "flag": "🇭🇲",
+    "code": "HM",
+    "latling": [-53.0818, 73.5042],
+    "capital": null
+  },
+  {
+    "name": "Laos",
+    "flag": "🇱🇦",
+    "code": "LA",
+    "latling": [18.0, 105.0],
+    "capital": "Vientiane"
+  },
+  {
+    "name": "Burkina Faso",
+    "flag": "🇧🇫",
+    "code": "BF",
+    "latling": [13.0, -2.0],
+    "capital": "Ouagadougou"
+  },
+  {
+    "name": "Cocos (Keeling) Islands",
+    "flag": "🇨🇨",
+    "code": "CC",
+    "latling": [-12.1642, 96.871],
+    "capital": "West Island"
+  },
+  {
+    "name": "Luxembourg",
+    "flag": "🇱🇺",
+    "code": "LU",
+    "latling": [49.75, 6.16666666],
+    "capital": "Luxembourg"
+  },
+  {
+    "name": "Indonesia",
+    "flag": "🇮🇩",
+    "code": "ID",
+    "latling": [-5.0, 120.0],
+    "capital": "Jakarta"
+  },
+  {
+    "name": "Lebanon",
+    "flag": "🇱🇧",
+    "code": "LB",
+    "latling": [33.83333333, 35.83333333],
+    "capital": "Beirut"
+  },
+  {
+    "name": "Turkey",
+    "flag": "🇹🇷",
+    "code": "TR",
+    "latling": [39.0, 35.0],
+    "capital": "Ankara"
+  },
+  {
+    "name": "Timor-Leste",
+    "flag": "🇹🇱",
+    "code": "TL",
+    "latling": [-8.83333333, 125.91666666],
+    "capital": "Dili"
+  },
+  {
+    "name": "Zimbabwe",
+    "flag": "🇿🇼",
+    "code": "ZW",
+    "latling": [-20.0, 30.0],
+    "capital": "Harare"
+  },
+  {
+    "name": "South Africa",
+    "flag": "🇿🇦",
+    "code": "ZA",
+    "latling": [-29.0, 24.0],
+    "capital": "Pretoria"
+  },
+  {
+    "name": "Armenia",
+    "flag": "🇦🇲",
+    "code": "AM",
+    "latling": [40.0, 45.0],
+    "capital": "Yerevan"
+  },
+  {
+    "name": "Ireland",
+    "flag": "🇮🇪",
+    "code": "IE",
+    "latling": [53.0, -8.0],
+    "capital": "Dublin"
+  },
+  {
+    "name": "Norway",
+    "flag": "🇳🇴",
+    "code": "NO",
+    "latling": [62.0, 10.0],
+    "capital": "Oslo"
+  },
+  {
+    "name": "Kenya",
+    "flag": "🇰🇪",
+    "code": "KE",
+    "latling": [1.0, 38.0],
+    "capital": "Nairobi"
+  },
+  {
+    "name": "North Korea",
+    "flag": "🇰🇵",
+    "code": "KP",
+    "latling": [40.0, 127.0],
+    "capital": "Pyongyang"
+  },
+  {
+    "name": "Afghanistan",
+    "flag": "🇦🇫",
+    "code": "AF",
+    "latling": [33.0, 65.0],
+    "capital": "Kabul"
+  },
+  {
+    "name": "Bermuda",
+    "flag": "🇧🇲",
+    "code": "BM",
+    "latling": [32.33333333, -64.75],
+    "capital": "Hamilton"
+  },
+  {
+    "name": "Spain",
+    "flag": "🇪🇸",
+    "code": "ES",
+    "latling": [40.0, -4.0],
+    "capital": "Madrid"
+  },
+  {
+    "name": "Netherlands",
+    "flag": "🇳🇱",
+    "code": "NL",
+    "latling": [52.5, 5.75],
+    "capital": "Amsterdam"
+  },
+  {
+    "name": "Nicaragua",
+    "flag": "🇳🇮",
+    "code": "NI",
+    "latling": [13.0, -85.0],
+    "capital": "Managua"
+  },
+  {
+    "name": "Lesotho",
+    "flag": "🇱🇸",
+    "code": "LS",
+    "latling": [-29.5, 28.5],
+    "capital": "Maseru"
+  },
+  {
+    "name": "Egypt",
+    "flag": "🇪🇬",
+    "code": "EG",
+    "latling": [27.0, 30.0],
+    "capital": "Cairo"
+  },
+  {
+    "name": "Gambia",
+    "flag": "🇬🇲",
+    "code": "GM",
+    "latling": [13.46666666, -16.56666666],
+    "capital": "Banjul"
+  },
+  {
+    "name": "Brazil",
+    "flag": "🇧🇷",
+    "code": "BR",
+    "latling": [-10.0, -55.0],
+    "capital": "Brasília"
+  },
+  {
+    "name": "Australia",
+    "flag": "🇦🇺",
+    "code": "AU",
+    "latling": [-27.0, 133.0],
+    "capital": "Canberra"
+  },
+  {
+    "name": "Bouvet Island",
+    "flag": "🇧🇻",
+    "code": "BV",
+    "latling": [-54.4208, 3.3464],
+    "capital": null
+  },
+  {
+    "name": "Pitcairn Islands",
+    "flag": "🇵🇳",
+    "code": "PN",
+    "latling": [-25.06666666, -130.1],
+    "capital": "Adamstown"
+  },
+  {
+    "name": "Barbados",
+    "flag": "🇧🇧",
+    "code": "BB",
+    "latling": [13.16666666, -59.53333333],
+    "capital": "Bridgetown"
+  },
+  {
+    "name": "Madagascar",
+    "flag": "🇲🇬",
+    "code": "MG",
+    "latling": [-20.0, 47.0],
+    "capital": "Antananarivo"
+  },
+  {
+    "name": "United Kingdom",
+    "flag": "🇬🇧",
+    "code": "GB",
+    "latling": [54.0, -2.0],
+    "capital": "London"
+  },
+  {
+    "name": "Portugal",
+    "flag": "🇵🇹",
+    "code": "PT",
+    "latling": [39.5, -8.0],
+    "capital": "Lisbon"
+  },
+  {
+    "name": "Greenland",
+    "flag": "🇬🇱",
+    "code": "GL",
+    "latling": [72.0, -40.0],
+    "capital": "Nuuk"
+  },
+  {
+    "name": "American Samoa",
+    "flag": "🇦🇸",
+    "code": "AS",
+    "latling": [-14.33333333, -170.0],
+    "capital": "Pago Pago"
+  },
+  {
+    "name": "South Georgia",
+    "flag": "🇬🇸",
+    "code": "GS",
+    "latling": [-54.5, -37.0],
+    "capital": "King Edward Point"
+  },
+  {
+    "name": "Turkmenistan",
+    "flag": "🇹🇲",
+    "code": "TM",
+    "latling": [40.0, 60.0],
+    "capital": "Ashgabat"
+  },
+  {
+    "name": "Guadeloupe",
+    "flag": "🇬🇵",
+    "code": "GP",
+    "latling": [16.25, -61.583333],
+    "capital": "Basse-Terre"
+  },
+  {
+    "name": "Dominica",
+    "flag": "🇩🇲",
+    "code": "DM",
+    "latling": [15.41666666, -61.33333333],
+    "capital": "Roseau"
+  },
+  {
+    "name": "Solomon Islands",
+    "flag": "🇸🇧",
+    "code": "SB",
+    "latling": [-8.0, 159.0],
+    "capital": "Honiara"
+  },
+  {
+    "name": "Saint Pierre and Miquelon",
+    "flag": "🇵🇲",
+    "code": "PM",
+    "latling": [46.83333333, -56.33333333],
+    "capital": "Saint-Pierre"
+  },
+  {
+    "name": "Rwanda",
+    "flag": "🇷🇼",
+    "code": "RW",
+    "latling": [-2.0, 30.0],
+    "capital": "Kigali"
+  },
+  {
+    "name": "Norfolk Island",
+    "flag": "🇳🇫",
+    "code": "NF",
+    "latling": [-29.03333333, 167.95],
+    "capital": "Kingston"
+  },
+  {
+    "name": "Panama",
+    "flag": "🇵🇦",
+    "code": "PA",
+    "latling": [9.0, -80.0],
+    "capital": "Panama City"
+  },
+  {
+    "name": "Bahamas",
+    "flag": "🇧🇸",
+    "code": "BS",
+    "latling": [25.0343, -77.3963],
+    "capital": "Nassau"
+  },
+  {
+    "name": "Tokelau",
+    "flag": "🇹🇰",
+    "code": "TK",
+    "latling": [-9.0, -172.0],
+    "capital": "Fakaofo"
+  },
+  {
+    "name": "Montenegro",
+    "flag": "🇲🇪",
+    "code": "ME",
+    "latling": [42.5, 19.3],
+    "capital": "Podgorica"
+  },
+  {
+    "name": "Åland Islands",
+    "flag": "🇦🇽",
+    "code": "AX",
+    "latling": [60.116667, 19.9],
+    "capital": "Mariehamn"
+  },
+  {
+    "name": "Niue",
+    "flag": "🇳🇺",
+    "code": "NU",
+    "latling": [-19.03333333, -169.86666666],
+    "capital": "Alofi"
+  },
+  {
+    "name": "Argentina",
+    "flag": "🇦🇷",
+    "code": "AR",
+    "latling": [-34.0, -64.0],
+    "capital": "Buenos Aires"
+  },
+  {
+    "name": "Cuba",
+    "flag": "🇨🇺",
+    "code": "CU",
+    "latling": [21.5, -80.0],
+    "capital": "Havana"
+  },
+  {
+    "name": "Cayman Islands",
+    "flag": "🇰🇾",
+    "code": "KY",
+    "latling": [19.3133, -81.2546],
+    "capital": "George Town"
+  },
+  {
+    "name": "Kazakhstan",
+    "flag": "🇰🇿",
+    "code": "KZ",
+    "latling": [48.0196, 66.9237],
+    "capital": "Astana"
+  },
+  {
+    "name": "Russia",
+    "flag": "🇷🇺",
+    "code": "RU",
+    "latling": [60.0, 100.0],
+    "capital": "Moscow"
+  },
+  {
+    "name": "India",
+    "flag": "🇮🇳",
+    "code": "IN",
+    "latling": [20.0, 77.0],
+    "capital": "New Delhi"
+  },
+  {
+    "name": "British Virgin Islands",
+    "flag": "🇻🇬",
+    "code": "VG",
+    "latling": [18.431383, -64.62305],
+    "capital": "Road Town"
+  },
+  {
+    "name": "Guam",
+    "flag": "🇬🇺",
+    "code": "GU",
+    "latling": [13.46666666, 144.78333333],
+    "capital": "Hagåtña"
+  },
+  {
+    "name": "Myanmar",
+    "flag": "🇲🇲",
+    "code": "MM",
+    "latling": [22.0, 98.0],
+    "capital": "Naypyidaw"
+  },
+  {
+    "name": "DR Congo",
+    "flag": "🇨🇩",
+    "code": "CD",
+    "latling": [0.0, 25.0],
+    "capital": "Kinshasa"
+  },
+  {
+    "name": "Mauritius",
+    "flag": "🇲🇺",
+    "code": "MU",
+    "latling": [-20.28333333, 57.55],
+    "capital": "Port Louis"
+  },
+  {
+    "name": "Falkland Islands",
+    "flag": "🇫🇰",
+    "code": "FK",
+    "latling": [-51.75, -59.0],
+    "capital": "Stanley"
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "flag": "🇲🇵",
+    "code": "MP",
+    "latling": [15.2, 145.75],
+    "capital": "Saipan"
+  },
+  {
+    "name": "Ukraine",
+    "flag": "🇺🇦",
+    "code": "UA",
+    "latling": [49.0, 32.0],
+    "capital": "Kyiv"
+  },
+  {
+    "name": "Monaco",
+    "flag": "🇲🇨",
+    "code": "MC",
+    "latling": [43.73333333, 7.4],
+    "capital": "Monaco"
+  },
+  {
+    "name": "Tajikistan",
+    "flag": "🇹🇯",
+    "code": "TJ",
+    "latling": [39.0, 71.0],
+    "capital": "Dushanbe"
+  },
+  {
+    "name": "Malaysia",
+    "flag": "🇲🇾",
+    "code": "MY",
+    "latling": [2.5, 112.5],
+    "capital": "Kuala Lumpur"
+  },
+  {
+    "name": "Somalia",
+    "flag": "🇸🇴",
+    "code": "SO",
+    "latling": [10.0, 49.0],
+    "capital": "Mogadishu"
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "flag": "🇦🇬",
+    "code": "AG",
+    "latling": [17.05, -61.8],
+    "capital": "Saint John's"
+  },
+  {
+    "name": "Central African Republic",
+    "flag": "🇨🇫",
+    "code": "CF",
+    "latling": [7.0, 21.0],
+    "capital": "Bangui"
+  },
+  {
+    "name": "Macau",
+    "flag": "🇲🇴",
+    "code": "MO",
+    "latling": [22.16666666, 113.55],
+    "capital": null
+  },
+  {
+    "name": "Israel",
+    "flag": "🇮🇱",
+    "code": "IL",
+    "latling": [31.47, 35.13],
+    "capital": "Jerusalem"
+  },
+  {
+    "name": "Nigeria",
+    "flag": "🇳🇬",
+    "code": "NG",
+    "latling": [10.0, 8.0],
+    "capital": "Abuja"
+  },
+  {
+    "name": "Honduras",
+    "flag": "🇭🇳",
+    "code": "HN",
+    "latling": [15.0, -86.5],
+    "capital": "Tegucigalpa"
+  },
+  {
+    "name": "Sierra Leone",
+    "flag": "🇸🇱",
+    "code": "SL",
+    "latling": [8.5, -11.5],
+    "capital": "Freetown"
+  },
+  {
+    "name": "Tunisia",
+    "flag": "🇹🇳",
+    "code": "TN",
+    "latling": [34.0, 9.0],
+    "capital": "Tunis"
+  },
+  {
+    "name": "Lithuania",
+    "flag": "🇱🇹",
+    "code": "LT",
+    "latling": [56.0, 24.0],
+    "capital": "Vilnius"
+  },
+  {
+    "name": "Iraq",
+    "flag": "🇮🇶",
+    "code": "IQ",
+    "latling": [33.0, 44.0],
+    "capital": "Baghdad"
+  },
+  {
+    "name": "Switzerland",
+    "flag": "🇨🇭",
+    "code": "CH",
+    "latling": [47.0, 8.0],
+    "capital": "Bern"
+  },
+  {
+    "name": "Chile",
+    "flag": "🇨🇱",
+    "code": "CL",
+    "latling": [-30.0, -71.0],
+    "capital": "Santiago"
+  },
+  {
+    "name": "Taiwan",
+    "flag": "🇹🇼",
+    "code": "TW",
+    "latling": [23.5, 121.0],
+    "capital": "Taipei"
+  },
+  {
+    "name": "Vietnam",
+    "flag": "🇻🇳",
+    "code": "VN",
+    "latling": [16.16666666, 107.83333333],
+    "capital": "Hanoi"
+  },
+  {
+    "name": "Bangladesh",
+    "flag": "🇧🇩",
+    "code": "BD",
+    "latling": [24.0, 90.0],
+    "capital": "Dhaka"
+  },
+  {
+    "name": "Vanuatu",
+    "flag": "🇻🇺",
+    "code": "VU",
+    "latling": [-16.0, 167.0],
+    "capital": "Port Vila"
+  },
+  {
+    "name": "Pakistan",
+    "flag": "🇵🇰",
+    "code": "PK",
+    "latling": [30.0, 70.0],
+    "capital": "Islamabad"
+  },
+  {
+    "name": "Latvia",
+    "flag": "🇱🇻",
+    "code": "LV",
+    "latling": [57.0, 25.0],
+    "capital": "Riga"
+  },
+  {
+    "name": "Malta",
+    "flag": "🇲🇹",
+    "code": "MT",
+    "latling": [35.9375, 14.3754],
+    "capital": "Valletta"
+  },
+  {
+    "name": "Seychelles",
+    "flag": "🇸🇨",
+    "code": "SC",
+    "latling": [-4.58333333, 55.66666666],
+    "capital": "Victoria"
+  },
+  {
+    "name": "Montserrat",
+    "flag": "🇲🇸",
+    "code": "MS",
+    "latling": [16.75, -62.2],
+    "capital": "Plymouth"
+  },
+  {
+    "name": "Anguilla",
+    "flag": "🇦🇮",
+    "code": "AI",
+    "latling": [18.25, -63.16666666],
+    "capital": "The Valley"
+  },
+  {
+    "name": "Greece",
+    "flag": "🇬🇷",
+    "code": "GR",
+    "latling": [39.0, 22.0],
+    "capital": "Athens"
+  },
+  {
+    "name": "Czechia",
+    "flag": "🇨🇿",
+    "code": "CZ",
+    "latling": [49.75, 15.5],
+    "capital": "Prague"
+  },
+  {
+    "name": "Zambia",
+    "flag": "🇿🇲",
+    "code": "ZM",
+    "latling": [-15.0, 30.0],
+    "capital": "Lusaka"
+  },
+  {
+    "name": "Hong Kong",
+    "flag": "🇭🇰",
+    "code": "HK",
+    "latling": [22.267, 114.188],
+    "capital": "City of Victoria"
+  },
+  {
+    "name": "United States",
+    "flag": "🇺🇸",
+    "code": "US",
+    "latling": [38.0, -97.0],
+    "capital": "Washington, D.C."
+  },
+  {
+    "name": "Eswatini",
+    "flag": "🇸🇿",
+    "code": "SZ",
+    "latling": [-26.5, 31.5],
+    "capital": "Mbabane"
+  },
+  {
+    "name": "Slovenia",
+    "flag": "🇸🇮",
+    "code": "SI",
+    "latling": [46.11666666, 14.81666666],
+    "capital": "Ljubljana"
+  },
+  {
+    "name": "Caribbean Netherlands",
+    "flag": "🇧🇶",
+    "code": "BQ",
+    "latling": [12.18, -68.25],
+    "capital": "Kralendijk"
+  },
+  {
+    "name": "Maldives",
+    "flag": "🇲🇻",
+    "code": "MV",
+    "latling": [3.25, 73.0],
+    "capital": "Malé"
+  },
+  {
+    "name": "Ghana",
+    "flag": "🇬🇭",
+    "code": "GH",
+    "latling": [8.0, -2.0],
+    "capital": "Accra"
+  },
+  {
+    "name": "Paraguay",
+    "flag": "🇵🇾",
+    "code": "PY",
+    "latling": [-23.0, -58.0],
+    "capital": "Asunción"
+  },
+  {
+    "name": "Mozambique",
+    "flag": "🇲🇿",
+    "code": "MZ",
+    "latling": [-18.25, 35.0],
+    "capital": "Maputo"
+  },
+  {
+    "name": "Palestine",
+    "flag": "🇵🇸",
+    "code": "PS",
+    "latling": [31.9, 35.2],
+    "capital": "Ramallah"
+  },
+  {
+    "name": "Moldova",
+    "flag": "🇲🇩",
+    "code": "MD",
+    "latling": [47.0, 29.0],
+    "capital": "Chișinău"
+  },
+  {
+    "name": "Liberia",
+    "flag": "🇱🇷",
+    "code": "LR",
+    "latling": [6.5, -9.5],
+    "capital": "Monrovia"
+  },
+  {
+    "name": "Liechtenstein",
+    "flag": "🇱🇮",
+    "code": "LI",
+    "latling": [47.26666666, 9.53333333],
+    "capital": "Vaduz"
+  },
+  {
+    "name": "Peru",
+    "flag": "🇵🇪",
+    "code": "PE",
+    "latling": [-10.0, -76.0],
+    "capital": "Lima"
+  },
+  {
+    "name": "Qatar",
+    "flag": "🇶🇦",
+    "code": "QA",
+    "latling": [25.5, 51.25],
+    "capital": "Doha"
+  },
+  {
+    "name": "Christmas Island",
+    "flag": "🇨🇽",
+    "code": "CX",
+    "latling": [-10.5, 105.66666666],
+    "capital": "Flying Fish Cove"
+  },
+  {
+    "name": "Georgia",
+    "flag": "🇬🇪",
+    "code": "GE",
+    "latling": [42.0, 43.5],
+    "capital": "Tbilisi"
+  },
+  {
+    "name": "Ecuador",
+    "flag": "🇪🇨",
+    "code": "EC",
+    "latling": [-2.0, -77.5],
+    "capital": "Quito"
+  },
+  {
+    "name": "Philippines",
+    "flag": "🇵🇭",
+    "code": "PH",
+    "latling": [13.0, 122.0],
+    "capital": "Manila"
+  },
+  {
+    "name": "Ethiopia",
+    "flag": "🇪🇹",
+    "code": "ET",
+    "latling": [8.0, 38.0],
+    "capital": "Addis Ababa"
+  },
+  {
+    "name": "United States Virgin Islands",
+    "flag": "🇻🇮",
+    "code": "VI",
+    "latling": [18.35, -64.933333],
+    "capital": "Charlotte Amalie"
+  },
+  {
+    "name": "Syria",
+    "flag": "🇸🇾",
+    "code": "SY",
+    "latling": [35.0, 38.0],
+    "capital": "Damascus"
+  },
+  {
+    "name": "Romania",
+    "flag": "🇷🇴",
+    "code": "RO",
+    "latling": [46.0, 25.0],
+    "capital": "Bucharest"
+  },
+  {
+    "name": "Guatemala",
+    "flag": "🇬🇹",
+    "code": "GT",
+    "latling": [15.5, -90.25],
+    "capital": "Guatemala City"
+  },
+  {
+    "name": "Nepal",
+    "flag": "🇳🇵",
+    "code": "NP",
+    "latling": [28.0, 84.0],
+    "capital": "Kathmandu"
+  },
+  {
+    "name": "Réunion",
+    "flag": "🇷🇪",
+    "code": "RE",
+    "latling": [-21.15, 55.5],
+    "capital": "Saint-Denis"
+  },
+  {
+    "name": "Benin",
+    "flag": "🇧🇯",
+    "code": "BJ",
+    "latling": [9.5, 2.25],
+    "capital": "Porto-Novo"
+  },
+  {
+    "name": "Kuwait",
+    "flag": "🇰🇼",
+    "code": "KW",
+    "latling": [29.5, 45.75],
+    "capital": "Kuwait City"
+  },
+  {
+    "name": "Suriname",
+    "flag": "🇸🇷",
+    "code": "SR",
+    "latling": [4.0, -56.0],
+    "capital": "Paramaribo"
+  },
+  {
+    "name": "New Caledonia",
+    "flag": "🇳🇨",
+    "code": "NC",
+    "latling": [-21.5, 165.5],
+    "capital": "Nouméa"
+  },
+  {
+    "name": "Sudan",
+    "flag": "🇸🇩",
+    "code": "SD",
+    "latling": [15.0, 30.0],
+    "capital": "Khartoum"
+  },
+  {
+    "name": "United States Minor Outlying Islands",
+    "flag": "🇺🇲",
+    "code": "UM",
+    "latling": [19.3, 166.633333],
+    "capital": "Washington DC"
+  },
+  {
+    "name": "Chad",
+    "flag": "🇹🇩",
+    "code": "TD",
+    "latling": [15.0, 19.0],
+    "capital": "N'Djamena"
+  },
+  {
+    "name": "Uruguay",
+    "flag": "🇺🇾",
+    "code": "UY",
+    "latling": [-33.0, -56.0],
+    "capital": "Montevideo"
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "flag": "🇧🇦",
+    "code": "BA",
+    "latling": [44.0, 18.0],
+    "capital": "Sarajevo"
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "flag": "🇹🇹",
+    "code": "TT",
+    "latling": [10.6918, -61.2225],
+    "capital": "Port of Spain"
+  },
+  {
+    "name": "Sweden",
+    "flag": "🇸🇪",
+    "code": "SE",
+    "latling": [62.0, 15.0],
+    "capital": "Stockholm"
+  },
+  {
+    "name": "Iceland",
+    "flag": "🇮🇸",
+    "code": "IS",
+    "latling": [65.0, -18.0],
+    "capital": "Reykjavik"
+  },
+  {
+    "name": "Haiti",
+    "flag": "🇭🇹",
+    "code": "HT",
+    "latling": [19.0, -72.41666666],
+    "capital": "Port-au-Prince"
+  },
+  {
+    "name": "Brunei",
+    "flag": "🇧🇳",
+    "code": "BN",
+    "latling": [4.5, 114.66666666],
+    "capital": "Bandar Seri Begawan"
+  },
+  {
+    "name": "French Southern and Antarctic Lands",
+    "flag": "🇹🇫",
+    "code": "TF",
+    "latling": [-49.25, 69.167],
+    "capital": "Port-aux-Français"
+  },
+  {
+    "name": "Guernsey",
+    "flag": "🇬🇬",
+    "code": "GG",
+    "latling": [49.46666666, -2.58333333],
+    "capital": "St. Peter Port"
+  },
+  {
+    "name": "Croatia",
+    "flag": "🇭🇷",
+    "code": "HR",
+    "latling": [45.16666666, 15.5],
+    "capital": "Zagreb"
+  },
+  {
+    "name": "Saint Barthélemy",
+    "flag": "🇧🇱",
+    "code": "BL",
+    "latling": [18.5, -63.41666666],
+    "capital": "Gustavia"
+  },
+  {
+    "name": "Mongolia",
+    "flag": "🇲🇳",
+    "code": "MN",
+    "latling": [46.0, 105.0],
+    "capital": "Ulan Bator"
+  },
+  {
+    "name": "Aruba",
+    "flag": "🇦🇼",
+    "code": "AW",
+    "latling": [12.5, -69.96666666],
+    "capital": "Oranjestad"
+  },
+  {
+    "name": "Republic of the Congo",
+    "flag": "🇨🇬",
+    "code": "CG",
+    "latling": [-1.0, 15.0],
+    "capital": "Brazzaville"
+  },
+  {
+    "name": "São Tomé and Príncipe",
+    "flag": "🇸🇹",
+    "code": "ST",
+    "latling": [1.0, 7.0],
+    "capital": "São Tomé"
+  },
+  {
+    "name": "Yemen",
+    "flag": "🇾🇪",
+    "code": "YE",
+    "latling": [15.0, 48.0],
+    "capital": "Sana'a"
+  },
+  {
+    "name": "Equatorial Guinea",
+    "flag": "🇬🇶",
+    "code": "GQ",
+    "latling": [2.0, 10.0],
+    "capital": "Ciudad de la Paz"
+  },
+  {
+    "name": "Svalbard and Jan Mayen",
+    "flag": "🇸🇯",
+    "code": "SJ",
+    "latling": [78.0, 20.0],
+    "capital": "Longyearbyen"
+  },
+  {
+    "name": "Colombia",
+    "flag": "🇨🇴",
+    "code": "CO",
+    "latling": [4.0, -72.0],
+    "capital": "Bogotá"
+  },
+  {
+    "name": "Guinea-Bissau",
+    "flag": "🇬🇼",
+    "code": "GW",
+    "latling": [12.0, -15.0],
+    "capital": "Bissau"
+  },
+  {
+    "name": "Kiribati",
+    "flag": "🇰🇮",
+    "code": "KI",
+    "latling": [1.41666666, 173.0],
+    "capital": "South Tarawa"
+  },
+  {
+    "name": "Germany",
+    "flag": "🇩🇪",
+    "code": "DE",
+    "latling": [51.0, 9.0],
+    "capital": "Berlin"
+  },
+  {
+    "name": "Thailand",
+    "flag": "🇹🇭",
+    "code": "TH",
+    "latling": [15.0, 100.0],
+    "capital": "Bangkok"
+  },
+  {
+    "name": "Isle of Man",
+    "flag": "🇮🇲",
+    "code": "IM",
+    "latling": [54.25, -4.5],
+    "capital": "Douglas"
+  },
+  {
+    "name": "Bhutan",
+    "flag": "🇧🇹",
+    "code": "BT",
+    "latling": [27.5, 90.5],
+    "capital": "Thimphu"
+  },
+  {
+    "name": "Gabon",
+    "flag": "🇬🇦",
+    "code": "GA",
+    "latling": [-1.0, 11.75],
+    "capital": "Libreville"
+  },
+  {
+    "name": "Sint Maarten",
+    "flag": "🇸🇽",
+    "code": "SX",
+    "latling": [18.033333, -63.05],
+    "capital": "Philipsburg"
+  },
+  {
+    "name": "Sri Lanka",
+    "flag": "🇱🇰",
+    "code": "LK",
+    "latling": [7.0, 81.0],
+    "capital": "Sri Jayawardenepura Kotte"
+  },
+  {
+    "name": "Albania",
+    "flag": "🇦🇱",
+    "code": "AL",
+    "latling": [41.0, 20.0],
+    "capital": "Tirana"
+  },
+  {
+    "name": "New Zealand",
+    "flag": "🇳🇿",
+    "code": "NZ",
+    "latling": [-41.0, 174.0],
+    "capital": "Wellington"
+  },
+  {
+    "name": "Algeria",
+    "flag": "🇩🇿",
+    "code": "DZ",
+    "latling": [28.0, 3.0],
+    "capital": "Algiers"
+  },
+  {
+    "name": "San Marino",
+    "flag": "🇸🇲",
+    "code": "SM",
+    "latling": [43.76666666, 12.41666666],
+    "capital": "City of San Marino"
+  },
+  {
+    "name": "Micronesia",
+    "flag": "🇫🇲",
+    "code": "FM",
+    "latling": [6.91666666, 158.25],
+    "capital": "Palikir"
+  },
+  {
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "flag": "🇸🇭",
+    "code": "SH",
+    "latling": [-15.95, -5.72],
+    "capital": "Jamestown"
+  },
+  {
+    "name": "Curaçao",
+    "flag": "🇨🇼",
+    "code": "CW",
+    "latling": [12.116667, -68.933333],
+    "capital": "Willemstad"
+  },
+  {
+    "name": "El Salvador",
+    "flag": "🇸🇻",
+    "code": "SV",
+    "latling": [13.83333333, -88.91666666],
+    "capital": "San Salvador"
+  },
+  {
+    "name": "Martinique",
+    "flag": "🇲🇶",
+    "code": "MQ",
+    "latling": [14.666667, -61.0],
+    "capital": "Fort-de-France"
+  },
+  {
+    "name": "Nauru",
+    "flag": "🇳🇷",
+    "code": "NR",
+    "latling": [-0.53333333, 166.91666666],
+    "capital": "Yaren"
+  },
+  {
+    "name": "Vatican City",
+    "flag": "🇻🇦",
+    "code": "VA",
+    "latling": [41.9, 12.45],
+    "capital": "Vatican City"
+  },
+  {
+    "name": "Grenada",
+    "flag": "🇬🇩",
+    "code": "GD",
+    "latling": [12.11666666, -61.66666666],
+    "capital": "St. George's"
+  },
+  {
+    "name": "Tonga",
+    "flag": "🇹🇴",
+    "code": "TO",
+    "latling": [-20.0, -175.0],
+    "capital": "Nuku'alofa"
+  },
+  {
+    "name": "Burundi",
+    "flag": "🇧🇮",
+    "code": "BI",
+    "latling": [-3.5, 30.0],
+    "capital": "Gitega"
+  },
+  {
+    "name": "Samoa",
+    "flag": "🇼🇸",
+    "code": "WS",
+    "latling": [-13.58333333, -172.33333333],
+    "capital": "Apia"
+  },
+  {
+    "name": "Denmark",
+    "flag": "🇩🇰",
+    "code": "DK",
+    "latling": [56.0, 10.0],
+    "capital": "Copenhagen"
+  },
+  {
+    "name": "Venezuela",
+    "flag": "🇻🇪",
+    "code": "VE",
+    "latling": [8.0, -66.0],
+    "capital": "Caracas"
+  },
+  {
+    "name": "Austria",
+    "flag": "🇦🇹",
+    "code": "AT",
+    "latling": [47.33333333, 13.33333333],
+    "capital": "Vienna"
+  },
+  {
+    "name": "Slovakia",
+    "flag": "🇸🇰",
+    "code": "SK",
+    "latling": [48.66666666, 19.5],
+    "capital": "Bratislava"
+  },
+  {
+    "name": "China",
+    "flag": "🇨🇳",
+    "code": "CN",
+    "latling": [35.0, 105.0],
+    "capital": "Beijing"
+  },
+  {
+    "name": "British Indian Ocean Territory",
+    "flag": "🇮🇴",
+    "code": "IO",
+    "latling": [-6.0, 71.5],
+    "capital": "Diego Garcia"
+  },
+  {
+    "name": "French Polynesia",
+    "flag": "🇵🇫",
+    "code": "PF",
+    "latling": [-17.6797, -149.4068],
+    "capital": "Papeetē"
+  },
+  {
+    "name": "Bolivia",
+    "flag": "🇧🇴",
+    "code": "BO",
+    "latling": [-17.0, -65.0],
+    "capital": "Sucre"
+  },
+  {
+    "name": "Antarctica",
+    "flag": "🇦🇶",
+    "code": "AQ",
+    "latling": [-90.0, 0.0],
+    "capital": null
+  },
+  {
+    "name": "Libya",
+    "flag": "🇱🇾",
+    "code": "LY",
+    "latling": [25.0, 17.0],
+    "capital": "Tripoli"
+  },
+  {
+    "name": "Estonia",
+    "flag": "🇪🇪",
+    "code": "EE",
+    "latling": [59.0, 26.0],
+    "capital": "Tallinn"
+  },
+  {
+    "name": "Cook Islands",
+    "flag": "🇨🇰",
+    "code": "CK",
+    "latling": [-21.23333333, -159.76666666],
+    "capital": "Avarua"
+  },
+  {
+    "name": "Puerto Rico",
+    "flag": "🇵🇷",
+    "code": "PR",
+    "latling": [18.25, -66.5],
+    "capital": "San Juan"
+  },
+  {
+    "name": "Belarus",
+    "flag": "🇧🇾",
+    "code": "BY",
+    "latling": [53.0, 28.0],
+    "capital": "Minsk"
+  },
+  {
+    "name": "Faroe Islands",
+    "flag": "🇫🇴",
+    "code": "FO",
+    "latling": [62.0, -7.0],
+    "capital": "Tórshavn"
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "flag": "🇻🇨",
+    "code": "VC",
+    "latling": [13.25, -61.2],
+    "capital": "Kingstown"
+  },
+  {
+    "name": "Dominican Republic",
+    "flag": "🇩🇴",
+    "code": "DO",
+    "latling": [19.0, -70.66666666],
+    "capital": "Santo Domingo"
+  },
+  {
+    "name": "Hungary",
+    "flag": "🇭🇺",
+    "code": "HU",
+    "latling": [47.0, 20.0],
+    "capital": "Budapest"
+  },
+  {
+    "name": "Bahrain",
+    "flag": "🇧🇭",
+    "code": "BH",
+    "latling": [26.0, 50.55],
+    "capital": "Manama"
+  },
+  {
+    "name": "Cameroon",
+    "flag": "🇨🇲",
+    "code": "CM",
+    "latling": [6.0, 12.0],
+    "capital": "Yaoundé"
+  },
+  {
+    "name": "Canada",
+    "flag": "🇨🇦",
+    "code": "CA",
+    "latling": [60.0, -95.0],
+    "capital": "Ottawa"
+  },
+  {
+    "name": "Eritrea",
+    "flag": "🇪🇷",
+    "code": "ER",
+    "latling": [15.0, 39.0],
+    "capital": "Asmara"
+  },
+  {
+    "name": "Singapore",
+    "flag": "🇸🇬",
+    "code": "SG",
+    "latling": [1.36666666, 103.8],
+    "capital": "Singapore"
+  },
+  {
+    "name": "Costa Rica",
+    "flag": "🇨🇷",
+    "code": "CR",
+    "latling": [10.0, -84.0],
+    "capital": "San José"
+  },
+  {
+    "name": "Serbia",
+    "flag": "🇷🇸",
+    "code": "RS",
+    "latling": [44.0, 21.0],
+    "capital": "Belgrade"
+  },
+  {
+    "name": "Poland",
+    "flag": "🇵🇱",
+    "code": "PL",
+    "latling": [52.0, 20.0],
+    "capital": "Warsaw"
+  },
+  {
+    "name": "Jordan",
+    "flag": "🇯🇴",
+    "code": "JO",
+    "latling": [31.0, 36.0],
+    "capital": "Amman"
+  }
 ]

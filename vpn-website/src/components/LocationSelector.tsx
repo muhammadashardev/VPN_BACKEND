@@ -54,69 +54,61 @@ export const LocationSelector = () => {
       </div>
 
       <div className="flex flex-col gap-2 max-h-[450px] overflow-y-auto pr-2 custom-scrollbar min-h-[100px]">
-        <AnimatePresence mode="popLayout">
-          {filteredServers.length > 0 ? (
-            filteredServers.map((server) => (
-              <motion.button
-                layout
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                key={server.id}
-                onClick={() => selectServer(server)}
-                disabled={isConnected}
-                className={cn(
-                  "group relative flex items-center justify-between p-4 rounded-2xl transition-all duration-300 border",
-                  selectedServer.id === server.id
-                    ? "bg-cyan-500/10 border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.1)]"
-                    : "bg-white/[0.03] border-white/[0.05] hover:bg-white/[0.08] hover:border-white/10",
-                  isConnected && selectedServer.id !== server.id && "opacity-50 cursor-not-allowed"
-                )}
-              >
-                <div className="flex items-center gap-4">
-                  <div className="text-2xl drop-shadow-sm">{server.flag}</div>
-                  <div className="text-left">
-                    <div className="text-white font-medium text-sm leading-tight">{server.country}</div>
-                    <div className="text-zinc-500 text-[10px] mt-0.5">{server.city}</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="flex flex-col items-end">
-                    <div className="flex items-center gap-1">
-                      <Signal className={cn(
-                        "h-2.5 w-2.5",
-                        server.latency < 50 ? "text-emerald-500" : server.latency < 100 ? "text-amber-500" : "text-rose-500"
-                      )} />
-                      <span className="text-[9px] text-zinc-400 font-mono">
-                        {server.latency}ms
-                      </span>
-                    </div>
-                    <div className="text-[9px] text-zinc-500 mt-0.5 font-mono">
-                      LOAD: {server.load}%
-                    </div>
-                  </div>
-                  
-                  <div className={cn(
-                    "h-6 w-6 rounded-full flex items-center justify-center transition-all duration-300",
-                    selectedServer.id === server.id ? "bg-cyan-500 text-black scale-100 rotate-0" : "bg-white/5 text-transparent scale-0 -rotate-90 group-hover:scale-100 group-hover:rotate-0 group-hover:bg-white/10"
-                  )}>
-                    <Check className="h-4 w-4" />
-                  </div>
-                </div>
-              </motion.button>
-            ))
-          ) : (
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="flex flex-col items-center justify-center py-12 text-zinc-500"
+        {filteredServers.length > 0 ? (
+          filteredServers.slice(0, 50).map((server) => (
+            <motion.button
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              key={server.id}
+              onClick={() => selectServer(server)}
+              disabled={isConnected}
+              className={cn(
+                "group relative flex items-center justify-between p-4 rounded-2xl transition-all duration-300 border",
+                selectedServer.id === server.id
+                  ? "bg-cyan-500/10 border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.1)]"
+                  : "bg-white/[0.03] border-white/[0.05] hover:bg-white/[0.08] hover:border-white/10",
+                isConnected && selectedServer.id !== server.id && "opacity-50 cursor-not-allowed"
+              )}
             >
-              <Search className="h-8 w-8 mb-3 opacity-20" />
-              <p className="text-sm">No locations found for "{searchQuery}"</p>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              <div className="flex items-center gap-4">
+                <div className="text-2xl drop-shadow-sm">{server.flag}</div>
+                <div className="text-left">
+                  <div className="text-white font-medium text-sm leading-tight">{server.country}</div>
+                  <div className="text-zinc-500 text-[10px] mt-0.5">{server.city}</div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="flex flex-col items-end">
+                  <div className="flex items-center gap-1">
+                    <Signal className={cn(
+                      "h-2.5 w-2.5",
+                      server.latency < 50 ? "text-emerald-500" : server.latency < 100 ? "text-amber-500" : "text-rose-500"
+                    )} />
+                    <span className="text-[9px] text-zinc-400 font-mono">
+                      {server.latency}ms
+                    </span>
+                  </div>
+                  <div className="text-[9px] text-zinc-500 mt-0.5 font-mono">
+                    LOAD: {server.load}%
+                  </div>
+                </div>
+                
+                <div className={cn(
+                  "h-6 w-6 rounded-full flex items-center justify-center transition-all duration-300",
+                  selectedServer.id === server.id ? "bg-cyan-500 text-black scale-100 rotate-0" : "bg-white/5 text-transparent scale-0 -rotate-90 group-hover:scale-100 group-hover:rotate-0 group-hover:bg-white/10"
+                )}>
+                  <Check className="h-4 w-4" />
+                </div>
+              </div>
+            </motion.button>
+          ))
+        ) : (
+          <div className="flex flex-col items-center justify-center py-12 text-zinc-500">
+            <Search className="h-8 w-8 mb-3 opacity-20" />
+            <p className="text-sm">No locations found for "{searchQuery}"</p>
+          </div>
+        )}
       </div>
     </div>
   );

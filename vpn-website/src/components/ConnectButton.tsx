@@ -83,12 +83,12 @@ export const ConnectButton = () => {
       <div className="text-center z-10">
         <h3 className={cn(
           "text-xl font-bold tracking-wider uppercase transition-colors duration-500",
-          isConnected ? "text-cyan-400" : "text-zinc-500"
+          isConnected ? "text-cyan-400" : isConnecting ? "text-amber-400" : "text-zinc-500"
         )}>
-          {isConnecting ? "Connecting..." : isConnected ? "Protected" : "Disconnected"}
+          {isConnecting ? "Verifying..." : isConnected ? "Protected" : "Disconnected"}
         </h3>
         <p className="text-zinc-500 text-sm mt-1">
-          {isConnected ? "VPN is active" : "Tap to secure connection"}
+          {isConnecting ? "Checking network integrity" : isConnected ? "VPN is active" : "Tap to secure connection"}
         </p>
       </div>
     </div>
