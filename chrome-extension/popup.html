@@ -20,8 +20,8 @@
 
         <div class="auth-form">
             <div class="tab-bar">
-                <button class="tab active" id="loginTab" onclick="switchTab('login')">Login</button>
-                <button class="tab" id="registerTab" onclick="switchTab('register')">Register</button>
+                <button class="tab active" id="loginTab">Login</button>
+                <button class="tab" id="registerTab">Register</button>
             </div>
 
             <div id="registerFields" style="display:none">
@@ -29,7 +29,7 @@
             </div>
             <input type="email" id="email" placeholder="Email" class="input">
             <input type="password" id="password" placeholder="Password" class="input">
-            <button id="authBtn" class="btn btn-primary" onclick="handleAuth()">Login</button>
+            <button id="authBtn" class="btn btn-primary">Login</button>
             <p id="authError" class="error"></p>
         </div>
     </div>
@@ -43,7 +43,7 @@
                 </svg>
                 <span>SecureNet VPN</span>
             </div>
-            <button class="btn-icon" onclick="handleLogout()" title="Logout">
+            <button class="btn-icon" id="logoutBtn" title="Logout">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
                     <polyline points="16 17 21 12 16 7"/>
@@ -69,7 +69,7 @@
 
         <!-- Connect Button -->
         <div class="connect-section">
-            <button id="connectBtn" class="connect-btn" onclick="toggleConnection()">
+            <button id="connectBtn" class="connect-btn">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
                     <circle cx="12" cy="12" r="2"/>
@@ -90,7 +90,7 @@
         <div class="setting-row">
             <span>Auto-Reconnect</span>
             <label class="toggle">
-                <input type="checkbox" id="autoReconnectToggle" checked onchange="toggleAutoReconnect()">
+                <input type="checkbox" id="autoReconnectToggle" checked>
                 <span class="slider"></span>
             </label>
         </div>
@@ -106,7 +106,7 @@
                     <circle cx="11" cy="11" r="8"/>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                 </svg>
-                <input type="text" id="searchInput" placeholder="Search countries..." oninput="filterServers()">
+                <input type="text" id="searchInput" placeholder="Search countries...">
             </div>
             <div id="serverList" class="server-list">
                 <div class="loading">Loading servers...</div>
