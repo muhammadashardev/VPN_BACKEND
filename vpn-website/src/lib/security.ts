@@ -67,11 +67,11 @@ export const spoofLocation = (lat: number, lng: number) => {
       coords: {
         latitude: lat,
         longitude: lng,
-        accuracy: 10,
+        accuracy: 10 + Math.random() * 5,
         altitude: null,
         altitudeAccuracy: null,
         heading: null,
-        speed: null,
+        speed: 0,
       },
       timestamp: Date.now(),
     };
