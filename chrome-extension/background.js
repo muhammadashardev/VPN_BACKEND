@@ -9,14 +9,14 @@ let state = {
     currentServer: null,
     proxyConfig: null,
     autoReconnect: true,
-    connectionId: null
+    connectionId: null,
+    proxyMode: false // true = real proxy active, false = simulation mode
 };
 
 // Load persisted state on startup
 chrome.storage.local.get(['vpnState'], (result) => {
     if (result.vpnState) {
         state = { ...state, ...result.vpnState };
-        // If was connected, attempt reconnect
         if (state.isConnected && state.token && state.autoReconnect) {
             reconnect();
         }
@@ -48,8 +48,24 @@ async function apiRequest(endpoint, method = 'GET', body = null) {
 // ============================================================
 // Proxy Management
 // ============================================================
+
+// RFC 5737 test/documentation IPs — these will never work as real proxies
+const FAKE_IP_PREFIXES = ['192.0.2.', '198.51.100.', '203.0.113.', '0.0.0.', '10.0.0.'];
+
+function isRealProxy(config) {
+    if (!config || !config.host) return false;
+    // Check if the proxy IP is a placeholder/test IP
+    return !FAKE_IP_PREFIXES.some(prefix => config.host.startsWith(prefix));
+}
+
 function setProxy(config) {
-    if (!config || !config.host) return;
+    if (!config || !config.host) return false;
+
+    // Only set proxy if it's a real, reachable proxy server
+    if (!isRealProxy(config)) {
+        console.log('Simulation mode: proxy host is a placeholder IP, skipping proxy setup');
+        return false;
+    }
 
     const proxyConfig = {
         mode: 'fixed_servers',
@@ -67,7 +83,6 @@ function setProxy(config) {
         console.log('Proxy set to:', config.host, config.port);
     });
 
-    // Handle proxy auth if credentials provided
     if (config.username && config.password) {
         chrome.webRequest?.onAuthRequired?.addListener(
             (details, callback) => {
@@ -77,6 +92,8 @@ function setProxy(config) {
             ['asyncBlocking']
         );
     }
+
+    return true;
 }
 
 function clearProxy() {
@@ -100,18 +117,21 @@ async function connectToServer(serverId) {
         state.proxyConfig = data.connection.proxyConfig;
         state.connectionId = data.connection.id;
         state.autoReconnect = data.connection.autoReconnect;
-        saveState();
 
-        // Set browser proxy
+        // Only set proxy if the server has a real proxy host
         if (data.connection.proxyConfig) {
-            setProxy(data.connection.proxyConfig);
+            state.proxyMode = setProxy(data.connection.proxyConfig);
+        } else {
+            state.proxyMode = false;
         }
 
-        // Update badge
+        saveState();
+
         chrome.action.setBadgeText({ text: 'ON' });
         chrome.action.setBadgeBackgroundColor({ color: '#06b6d4' });
 
-        return { success: true, connection: data.connection };
+        const mode = state.proxyMode ? 'proxy' : 'simulation';
+        return { success: true, connection: data.connection, mode };
     } catch (err) {
         return { success: false, error: err.message };
     }
@@ -124,12 +144,16 @@ async function disconnectFromServer() {
         console.error('Disconnect API error:', err);
     }
 
+    // Only clear proxy if we actually set one
+    if (state.proxyMode) {
+        clearProxy();
+    }
+
     state.isConnected = false;
     state.proxyConfig = null;
     state.connectionId = null;
+    state.proxyMode = false;
     saveState();
-
-    clearProxy();
 
     chrome.action.setBadgeText({ text: '' });
 
@@ -146,16 +170,18 @@ async function reconnect() {
         state.currentServer = data.connection.server;
         state.proxyConfig = data.connection.proxyConfig;
         state.connectionId = data.connection.id;
-        saveState();
 
         if (data.connection.proxyConfig) {
-            setProxy(data.connection.proxyConfig);
+            state.proxyMode = setProxy(data.connection.proxyConfig);
+        } else {
+            state.proxyMode = false;
         }
+
+        saveState();
 
         chrome.action.setBadgeText({ text: 'ON' });
         chrome.action.setBadgeBackgroundColor({ color: '#06b6d4' });
 
-        // Notify user
         chrome.notifications.create('reconnected', {
             type: 'basic',
             iconUrl: 'icons/icon128.png',
@@ -173,8 +199,6 @@ async function reconnect() {
 // ============================================================
 // Network Monitoring for Auto-Reconnect
 // ============================================================
-
-// Check connectivity every 30 seconds when connected
 chrome.alarms.create('networkCheck', { periodInMinutes: 0.5 });
 
 let wasOffline = false;
@@ -184,28 +208,24 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
     if (!state.autoReconnect || !state.token) return;
 
     try {
-        // Simple connectivity check
         const response = await fetch(`${API_BASE}/health`, {
             method: 'GET',
             signal: AbortSignal.timeout(5000)
         });
 
         if (response.ok) {
-            // We're online
             if (wasOffline && state.currentServer && !state.isConnected) {
-                // Was offline, now online - reconnect!
                 console.log('Network recovered - auto-reconnecting...');
                 await reconnect();
                 wasOffline = false;
             }
         }
     } catch (err) {
-        // Network is down
         if (state.isConnected) {
             wasOffline = true;
             state.isConnected = false;
             saveState();
-            clearProxy();
+            if (state.proxyMode) clearProxy();
             chrome.action.setBadgeText({ text: '!' });
             chrome.action.setBadgeBackgroundColor({ color: '#ef4444' });
         }
@@ -275,7 +295,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                         isConnected: state.isConnected,
                         isLoggedIn: !!state.token,
                         currentServer: state.currentServer,
-                        autoReconnect: state.autoReconnect
+                        autoReconnect: state.autoReconnect,
+                        proxyMode: state.proxyMode
                     }
                 };
             }
@@ -307,5 +328,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     };
 
     handler().then(sendResponse);
-    return true; // Keep message channel open for async response
+    return true;
 });

@@ -275,6 +275,16 @@ function updateUI(state) {
         $('serverCity').textContent = state.currentServer.city || 'Main Gateway';
 
         selectedServerId = state.currentServer.id || state.currentServer._id;
+
+        // Show mode badge
+        const badge = $('modeBadge');
+        if (state.proxyMode) {
+            badge.textContent = 'Live Proxy';
+            badge.className = 'mode-badge live';
+        } else {
+            badge.textContent = 'Simulation Mode';
+            badge.className = 'mode-badge simulation';
+        }
     } else {
         panel.className = 'status-panel disconnected';
         btn.classList.remove('active');
