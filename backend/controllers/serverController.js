@@ -33,7 +33,7 @@ const updateServerStatus = async (req, res) => {
         const server = await Server.findByIdAndUpdate(
             req.params.id,
             { status, load },
-            { new: true }
+            { returnDocument: 'after' }
         );
         if (!server) return res.status(404).json({ msg: 'Server not found' });
         res.json(server);

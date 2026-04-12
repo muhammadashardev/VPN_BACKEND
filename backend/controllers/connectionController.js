@@ -86,7 +86,7 @@ const disconnect = async (req, res) => {
         const connection = await Connection.findOneAndUpdate(
             { userId: req.user.id, type, status: 'active' },
             { status: 'disconnected', disconnectedAt: new Date() },
-            { new: true }
+            { returnDocument: 'after' }
         );
 
         if (connection) {
