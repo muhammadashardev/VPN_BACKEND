@@ -5,20 +5,25 @@ import { useVpn } from "@/context/VpnContext";
 import { ConnectButton } from "./ConnectButton";
 import { LocationSelector } from "./LocationSelector";
 import { motion } from "framer-motion";
-import { Shield, Zap, Activity, Clock, Lock, MapPin, Eye, EyeOff, Globe, CheckCircle2 } from "lucide-react";
+import { Shield, Zap, Clock, Lock, MapPin, EyeOff, Globe, CheckCircle2, Wifi, WifiOff, User, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const Dashboard = () => {
-  const { 
-    isConnected, 
-    isConnecting, 
-    selectedServer, 
-    currentIp, 
+  const {
+    isConnected,
+    isConnecting,
+    selectedServer,
+    currentIp,
     sessionTime,
     isIpVerified,
     isWebRtcSecure,
     isLocationSecure,
-    locationData
+    locationData,
+    autoReconnect,
+    setAutoReconnect,
+    isLoggedIn,
+    user,
+    logout
   } = useVpn();
 
   const formatTime = (seconds: number) => {
@@ -73,6 +78,31 @@ export const Dashboard = () => {
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* User & Auto-Reconnect Bar */}
+          <div className="flex items-center gap-3 mt-2">
+            {isLoggedIn && user && (
+              <div className="flex items-center gap-2 px-3 py-1.5 bg-white/[0.03] border border-white/[0.05] rounded-xl">
+                <User className="h-3 w-3 text-cyan-500" />
+                <span className="text-xs text-zinc-400">{user.name || user.email}</span>
+                <button onClick={logout} className="ml-1 text-zinc-600 hover:text-rose-400 transition-colors">
+                  <LogOut className="h-3 w-3" />
+                </button>
+              </div>
+            )}
+            <button
+              onClick={() => setAutoReconnect(!autoReconnect)}
+              className={cn(
+                "flex items-center gap-2 px-3 py-1.5 rounded-xl border transition-all text-xs font-medium",
+                autoReconnect
+                  ? "bg-cyan-500/10 border-cyan-500/30 text-cyan-400"
+                  : "bg-white/[0.03] border-white/[0.05] text-zinc-500"
+              )}
+            >
+              {autoReconnect ? <Wifi className="h-3 w-3" /> : <WifiOff className="h-3 w-3" />}
+              Auto-Reconnect {autoReconnect ? "ON" : "OFF"}
+            </button>
           </div>
         </div>
 
@@ -229,10 +259,11 @@ const SecurityBadge = ({ icon, label, status, secure }: { icon: React.ReactNode,
   </div>
 );
 
-const StatCard = ({ icon, label, value, subValue }: { icon: React.ReactNode, label: string, value: string, subValue?: string }) => (
+const StatCard = ({ icon, label, value, subValue, onClick }: { icon: React.ReactNode, label: string, value: string, subValue?: string, onClick?: () => void }) => (
   <motion.div 
     whileHover={{ y: -5, backgroundColor: "#1f1f23" }}
-    className="bg-white/[0.03] border border-white/[0.05] p-4 rounded-2xl flex flex-col gap-1 transition-colors group"
+    className={cn("bg-white/[0.03] border border-white/[0.05] p-4 rounded-2xl flex flex-col gap-1 transition-colors group", onClick && "cursor-pointer")}
+    onClick={onClick}
   >
     <div className="flex items-center gap-2 text-zinc-500 text-xs font-medium uppercase tracking-wider mb-1">
       {icon}

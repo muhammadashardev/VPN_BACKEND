@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><title>Generate Extension Icons</title></head>
+<body>
+<h2>Right-click each canvas and "Save Image As" to create icon files</h2>
+<p>Save as: icon16.png, icon48.png, icon128.png</p>
+<script>
+[16, 48, 128].forEach(size => {
+    const canvas = document.createElement('canvas');
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext('2d');
+
+    // Background circle
+    ctx.beginPath();
+    ctx.arc(size/2, size/2, size/2, 0, Math.PI * 2);
+    ctx.fillStyle = '#0a0a0f';
+    ctx.fill();
+
+    // Shield icon
+    ctx.strokeStyle = '#06b6d4';
+    ctx.lineWidth = size * 0.06;
+    ctx.beginPath();
+    const s = size * 0.25;
+    const cx = size/2, cy = size/2;
+    ctx.moveTo(cx, cy - s);
+    ctx.lineTo(cx + s * 0.8, cy - s * 0.5);
+    ctx.lineTo(cx + s * 0.8, cy + s * 0.2);
+    ctx.quadraticCurveTo(cx + s * 0.4, cy + s * 0.8, cx, cy + s);
+    ctx.quadraticCurveTo(cx - s * 0.4, cy + s * 0.8, cx - s * 0.8, cy + s * 0.2);
+    ctx.lineTo(cx - s * 0.8, cy - s * 0.5);
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(6,182,212,0.2)';
+    ctx.fill();
+    ctx.stroke();
+
+    const label = document.createElement('p');
+    label.textContent = `icon${size}.png:`;
+    document.body.appendChild(label);
+    document.body.appendChild(canvas);
+});
+</script>
+</body>
+</html>

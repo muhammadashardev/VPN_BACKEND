@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureNet VPN</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <!-- Login View -->
+    <div id="loginView" class="view">
+        <div class="header">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>SecureNet VPN</span>
+            </div>
+        </div>
+
+        <div class="auth-form">
+            <div class="tab-bar">
+                <button class="tab active" id="loginTab" onclick="switchTab('login')">Login</button>
+                <button class="tab" id="registerTab" onclick="switchTab('register')">Register</button>
+            </div>
+
+            <div id="registerFields" style="display:none">
+                <input type="text" id="regName" placeholder="Full Name" class="input">
+            </div>
+            <input type="email" id="email" placeholder="Email" class="input">
+            <input type="password" id="password" placeholder="Password" class="input">
+            <button id="authBtn" class="btn btn-primary" onclick="handleAuth()">Login</button>
+            <p id="authError" class="error"></p>
+        </div>
+    </div>
+
+    <!-- Main VPN View -->
+    <div id="mainView" class="view" style="display:none">
+        <div class="header">
+            <div class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>SecureNet VPN</span>
+            </div>
+            <button class="btn-icon" onclick="handleLogout()" title="Logout">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                    <polyline points="16 17 21 12 16 7"/>
+                    <line x1="21" y1="12" x2="9" y2="12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Connection Status -->
+        <div id="statusPanel" class="status-panel disconnected">
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span id="statusText">Disconnected</span>
+            </div>
+            <div id="serverInfo" class="server-info" style="display:none">
+                <span id="serverFlag" class="server-flag"></span>
+                <div>
+                    <div id="serverCountry" class="server-country"></div>
+                    <div id="serverCity" class="server-city"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Connect Button -->
+        <div class="connect-section">
+            <button id="connectBtn" class="connect-btn" onclick="toggleConnection()">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    <circle cx="12" cy="12" r="2"/>
+                    <path d="M12 2v4"/>
+                    <path d="M12 18v4"/>
+                    <path d="m4.93 4.93 2.83 2.83"/>
+                    <path d="m16.24 16.24 2.83 2.83"/>
+                    <path d="M2 12h4"/>
+                    <path d="M18 12h4"/>
+                    <path d="m4.93 19.07 2.83-2.83"/>
+                    <path d="m16.24 7.76 2.83-2.83"/>
+                </svg>
+            </button>
+            <p id="connectLabel" class="connect-label">Tap to connect</p>
+        </div>
+
+        <!-- Auto-Reconnect Toggle -->
+        <div class="setting-row">
+            <span>Auto-Reconnect</span>
+            <label class="toggle">
+                <input type="checkbox" id="autoReconnectToggle" checked onchange="toggleAutoReconnect()">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <!-- Server List -->
+        <div class="server-section">
+            <div class="server-header">
+                <span>Select Location</span>
+                <span id="serverCount" class="server-count">0 servers</span>
+            </div>
+            <div class="search-box">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search countries..." oninput="filterServers()">
+            </div>
+            <div id="serverList" class="server-list">
+                <div class="loading">Loading servers...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
